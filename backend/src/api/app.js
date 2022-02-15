@@ -4,6 +4,6 @@ const root = require('../controllers/root');
 const app = express();
 app.use(express.json());
 
-app.get('/', root);
+app.use('/', root);
 
 module.exports = app;
