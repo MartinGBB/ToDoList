@@ -5,7 +5,7 @@ module.exports = async (req, res, next) => {
   try {
     const data = req.body;
     const createTask = await service.create(data);
-    return res.status(StatusCodes.CREATED).send(createTask);
+    return res.status(StatusCodes.CREATED).send(data);
   } catch (err) {
     next(err);
   }
