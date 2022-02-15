@@ -1,18 +1,23 @@
 {
-  "name": "backend",
+  "name": "to-do-list-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/api/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "start": "node .",
+    "dev": "nodemon ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "mongodb": "^4.3.1",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0"
   }
 }
