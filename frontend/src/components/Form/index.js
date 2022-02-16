@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import fetchApi from '../../utils/fetch';
 import {
   Content,
 } from './style';
@@ -7,8 +8,12 @@ function Form() {
   const [task, setTask] = useState('');
   const [category, setCategory] = useState('otro');
 
-  const handleSubmit = () => {
-    console.log(task, category)
+  const handleSubmit = async () => {
+    const data = JSON.stringify({ task, category });
+    const route = "/";
+    const method = "POST";
+    const request = await fetchApi(data, route, method);
+    console.log(request)
   };
 
   return (
