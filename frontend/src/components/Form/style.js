@@ -11,5 +11,13 @@ export const Content = styled.form`
     padding: 6px;
     border: 1px solid #bbb;
     border-radius: 3px;
-  }
+    margin: 5px;
+  };
+
+  & select {
+    width: 25%;
+    padding: 5px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+  };
 `
