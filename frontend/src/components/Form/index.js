@@ -7,15 +7,14 @@ function Form() {
   const [task, setTask] = useState('');
   const [category, setCategory] = useState('otro');
 
-  // const handleChange = ({ target: { name, value } }) => {
-  //   [name] = value;
-  //   setTask(value)
-  //   console.log(name, value)
-  // };
+  const handleSubmit = () => {
+    console.log(task, category)
+  };
 
   return (
     <Content>
       <input
+        autoComplete="false"
         placeholder="Crie sua tarefa"
         name="task"
         value={ task }
@@ -32,6 +31,12 @@ function Form() {
         <option value="trabalho">Trabalho</option>
         <option value="outro">Outro</option>
       </select>
+      <button
+        type="button"
+        onClick={ handleSubmit }
+      >
+        Adicionar
+      </button>
     </Content>
   );
 }
