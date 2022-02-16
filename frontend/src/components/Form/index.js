@@ -5,7 +5,7 @@ import {
 
 function Form() {
   const [task, setTask] = useState('');
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('otro');
 
   // const handleChange = ({ target: { name, value } }) => {
   //   [name] = value;
@@ -25,7 +25,7 @@ function Form() {
         name="category"
         value={ category }
         onChange={ ({ target: { value } }) => setCategory(value) }>
-        <option hidden selected>Categoria</option>
+        <option hidden defaultValue>Categoria</option>
         <option value="pessoal">Pessoal</option>
         <option value="comida">Comida</option>
         <option value="escola">Escola</option>
