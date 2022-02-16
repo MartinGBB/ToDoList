@@ -5,11 +5,13 @@ import {
 
 function Form() {
   const [task, setTask] = useState('');
+  const [category, setCategory] = useState('');
 
-  const handleChange = ({ target: { value } }) => {
-    setTask(value)
-    console.log(value)
-  };
+  // const handleChange = ({ target: { name, value } }) => {
+  //   [name] = value;
+  //   setTask(value)
+  //   console.log(name, value)
+  // };
 
   return (
     <Content>
@@ -17,10 +19,12 @@ function Form() {
         placeholder="Crie sua tarefa"
         name="task"
         value={ task }
-        onChange={ (event) => handleChange(event) }
+        onChange={ ({ target: { value } }) => setTask(value) }
       />
-      <select>
-        Category
+      <select
+        name="category"
+        value={ category }
+        onChange={ ({ target: { value } }) => setCategory(value) }>
         <option value="pessoal">Pessoal</option>
         <option value="comida">Comida</option>
         <option value="escola">Escola</option>
