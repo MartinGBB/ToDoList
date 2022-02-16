@@ -25,7 +25,6 @@ function Form() {
         name="category"
         value={ category }
         onChange={ ({ target: { value } }) => setCategory(value) }>
-        <option hidden selected>Seleccione una categoria</option>
         <option value="pessoal">Pessoal</option>
         <option value="comida">Comida</option>
         <option value="escola">Escola</option>

@@ -15,9 +15,10 @@ export const Content = styled.form`
   };
 
   & select {
-    width: 25%;
+    width: auto;
     padding: 5px;
     border: 1px solid #bbb;
     border-radius: 3px;
+    background: snow;
   };
 `
