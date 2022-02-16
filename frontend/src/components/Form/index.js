@@ -19,6 +19,13 @@ function Form() {
         value={ task }
         onChange={ (event) => handleChange(event) }
       />
+      <select>
+        Category
+        <option value="pessoal">Pessoal</option>
+        <option value="comida">Comida</option>
+        <option value="escola">Escola</option>
+        <option value="trabalho">Trabalho</option>
+      </select>
     </Content>
   );
 }
