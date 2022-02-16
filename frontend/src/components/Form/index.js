@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import {
   Content,
 } from './style';
 
 function Form() {
-  const handleSubmit = ({ target: { value } }) => {
+  const [task, setTask] = useState('');
+
+  const handleChange = ({ target: { value } }) => {
+    setTask(value)
     console.log(value)
   };
 
@@ -12,7 +16,8 @@ function Form() {
       <input
         placeholder="Crie sua tarefa"
         name="task"
-        onChange={ (event) => handleSubmit(event) }
+        value={ task }
+        onChange={ (event) => handleChange(event) }
       />
     </Content>
   );
