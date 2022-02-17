@@ -1,5 +1,5 @@
 const update = require('../../model/documents/update');
-const { ID_IS_REQUIRE } = require('../../statusCode');
+const { ID_IS_REQUIRE, NOT_UPDATE } = require('../../statusCode');
 
 const validateId = (id) => {
   if (!id) return ID_IS_REQUIRE;
@@ -9,6 +9,7 @@ const validateId = (id) => {
 module.exports = async (data) => {
   const validation = validateId(data.id)
   if (validation.error) throw validation.error;
-  await update(data);
+  const response = await update(data);
+  if (response.matchedCount !== 1) return NOT_UPDATE.error;
   return { status: 200, message: "tarefa atualizada" };
 };
