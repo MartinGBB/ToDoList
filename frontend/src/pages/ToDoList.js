@@ -1,5 +1,5 @@
-import Form from '../../components/Form';
-import TaskList from '../../components/TaskList';
+import Form from '../components/Form';
+import TaskList from '../components/TaskList';
 
 function ToDoList() {
   return (

@@ -1,9 +1,10 @@
 // import { } from './style';
+import Task from "../Task";
 
 function TaskList() {
   return (
     <div>
-      <h1>hello</h1>
+      <Task />
     </div>
   );
 }
