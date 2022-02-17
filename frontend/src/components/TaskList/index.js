@@ -16,7 +16,6 @@ function TaskList() {
 
   const handleDelete = async (id) => {
     const route = `/${id}`;
-    console.log(id);
     const method = "DELETE";
     return fetchApi(route, method);
   }

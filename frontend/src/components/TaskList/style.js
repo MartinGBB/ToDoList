@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const Table = styled.table`
+  aling-itens: center;
+  
   text-align: left;
   display: flex;
   display: block;
-  margin: 5px 20px;
-  whidth: 100%;
+  margin: auto;
+  width: 100%;
   padding: 15px 1px;
   }
 
@@ -13,7 +15,7 @@ export const Table = styled.table`
   text-align: left;
     font-size: 20px;
     padding: 15px 5px;
-    whidth: 200px;
+    width: 200px;
   }
 
   & td {
@@ -33,8 +35,8 @@ export const Table = styled.table`
   };
 
   & button:active {
-  position: relative;
-  top: 3px;
-  box-shadow: none;
+    position: relative;
+    top: 3px;
+    box-shadow: none;
 }
 `;
