@@ -1,6 +1,6 @@
-const list = require('../../models/recipes');
+const list = require('../../model/documents/list');
 
 module.exports = async () => {
-  const listDB = await list.find();
+  const listDB = await list();
   return { status: 200, message: listDB};
 };
