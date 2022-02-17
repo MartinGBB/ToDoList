@@ -17,7 +17,6 @@ module.exports = async () => {
         useUnifiedTopology: true,
       },
     )).db(DB_NAME));
-    console.log('mongo connected');
     return connection;
   } catch (err) {
     process.exit(1);

@@ -40,12 +40,14 @@ function TaskList() {
                 <tr>
                   <td>{ task }</td>
                   <td>{ category }</td>
+                  <td>
                   <button
                     type="button"
                     onClick={ () => handleDelete(_id) }
                   >
                     eliminar
                   </button>
+                  </td>
                 </tr>
               </tbody>
               ))
