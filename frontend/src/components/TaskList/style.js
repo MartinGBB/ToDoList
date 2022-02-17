@@ -15,6 +15,5 @@ export const Table = styled.table`
 
   & td {
     text-aling: left;
-    padding: 10px 20px;
   }
 `;

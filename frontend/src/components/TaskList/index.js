@@ -14,6 +14,13 @@ function TaskList() {
     setIsLoading(false);
   };
 
+  const handleDelete = async (id) => {
+    const route = `/${id}`;
+    console.log(id);
+    const method = "DELETE";
+    return fetchApi(route, method);
+  }
+
   useEffect(() => {
     handleFind();
   }, [tasks]);
@@ -34,6 +41,12 @@ function TaskList() {
                 <tr>
                   <td>{ task }</td>
                   <td>{ category }</td>
+                  <button
+                    type="button"
+                    onClick={ () => handleDelete(_id) }
+                  >
+                    eliminar
+                  </button>
                 </tr>
               </tbody>
               ))
