@@ -6,7 +6,7 @@ import {
 
 function Form() {
   const [task, setTask] = useState('');
-  const [category, setCategory] = useState('otro');
+  const [category, setCategory] = useState('outro');
 
   const handleSubmit = async () => {
     const data = { task, category };
