@@ -44,3 +44,15 @@ O Backend esta configurado na porta local 3001. Caso deseje utilizar outra porta
 #
 
 O banco escolhido para a aplicação foi Mongodb, pela agilidade no desenvolvimento, facilidade de adição de novas informações sem necessitar re-estruturar toda a estrutura e pela robustes para lidar com grande volume de requisições.
+
+#
+## Contato
+#
+
+### Martin Brazón
+#
+[linkedin](https://www.linkedin.com/in/martinbrazon/)
+
+[Github](https://github.com/MartinGBB/ToDoList)
+
+email: escorpmartin97@gmail.com
