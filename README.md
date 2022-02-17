@@ -38,3 +38,9 @@
 
 
 O Backend esta configurado na porta local 3001. Caso deseje utilizar outra porta utilize o arquivo .env para trocar para a porta desejada. Após a alteração renomeie o arquivo para .env
+
+#
+## Banco de dados
+#
+
+O banco escolhido para a aplicação foi Mongodb, pela agilidade no desenvolvimento, facilidade de adição de novas informações sem necessitar re-estruturar toda a estrutura e pela robustes para lidar com grande volume de requisições.
