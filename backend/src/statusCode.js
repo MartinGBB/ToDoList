@@ -14,7 +14,24 @@ const EMPTY_CATEGORY = {
   },
 };
 
+const ID_IS_REQUIRE = {
+  error: {
+    status: StatusCodes.UNPROCESSABLE_ENTITY,
+    message: "id is required",
+  },
+};
+
+const NOT_UPDATE = {
+  error: {
+    status: StatusCodes.NOT_FOUND,
+    message: "Tarefa não atualizada, verifique os dados",
+  },
+};
+
+
 module.exports = {
   EMPTY_TASK,
-  EMPTY_CATEGORY
+  EMPTY_CATEGORY,
+  ID_IS_REQUIRE,
+  NOT_UPDATE,
 };
