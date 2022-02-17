@@ -14,7 +14,15 @@ const EMPTY_CATEGORY = {
   },
 };
 
+const ID_IS_REQUIRE = {
+  error: {
+    status: StatusCodes.UNPROCESSABLE_ENTITY,
+    message: "id is required",
+  },
+};
+
 module.exports = {
   EMPTY_TASK,
-  EMPTY_CATEGORY
+  EMPTY_CATEGORY,
+  ID_IS_REQUIRE,
 };
