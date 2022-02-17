@@ -29,8 +29,8 @@ function TaskList() {
             </tr>
           </thead>
             {
-              tasks.map(({ task, category }, i) => (
-              <tbody key={ i }>
+              tasks.map(({ _id, task, category }) => (
+              <tbody key={ _id }>
                 <tr>
                   <td>{ task }</td>
                   <td>{ category }</td>
