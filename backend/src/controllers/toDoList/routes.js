@@ -7,6 +7,6 @@ const router = express.Router({ mergeParams: true });
 
 router.post('/', create);
 router.get('/', list);
-router.delete('/', remove);
+router.delete('/:id', remove);
 
 module.exports = router;
