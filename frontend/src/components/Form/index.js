@@ -9,11 +9,11 @@ function Form() {
   const [category, setCategory] = useState('otro');
 
   const handleSubmit = async () => {
-    const data = JSON.stringify({ task, category });
+    const data = { task, category };
     const route = "/";
     const method = "POST";
-    const request = await fetchApi(data, route, method);
-    console.log(request)
+    const request = await fetchApi(route, method, data);
+    return request;
   };
 
   return (
