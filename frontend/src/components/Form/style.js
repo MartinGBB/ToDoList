@@ -12,6 +12,7 @@ export const Content = styled.form`
     border: 1px solid #bbb;
     border-radius: 3px;
     margin: 5px;
+    box-shadow:0 2px 0 gray;
   };
 
   & select {
@@ -21,6 +22,7 @@ export const Content = styled.form`
     border-radius: 3px;
     background: snow;
     margin: 5px;
+    box-shadow:0 2px 0 gray;
   };
   
   & button {
@@ -31,5 +33,14 @@ export const Content = styled.form`
     background: snow;
     margin: 5px;
     cursor: pointer;
+    box-shadow:0 2px 0 gray;
   };
+
+  & button:active {
+  position: relative;
+  top: 3px;
+  box-shadow: none;
+}
 `;
+
+// referens: https://www.todoespacoonline.com/w/2014/05/efeito-3d-em-botoes-com-css/
