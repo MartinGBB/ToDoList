@@ -7,9 +7,8 @@ const validateId = (id) => {
 }
 
 module.exports = async (data) => {
-  console.log(data.id);
   const validation = validateId(data.id)
   if (validation.error) throw validation.error;
-  const updateDB = await update(data);
-  return { status: 200, updateDB };
+  await update(data);
+  return { status: 200, message: "tarefa atualizada" };
 };
