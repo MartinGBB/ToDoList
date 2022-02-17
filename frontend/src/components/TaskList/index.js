@@ -14,6 +14,12 @@ function TaskList() {
     setIsLoading(false);
   };
 
+  const handleDelete = async (id) => {
+    const route = `/${id}`;
+    const method = "DELETE";
+    return fetchApi(route, method);
+  }
+
   useEffect(() => {
     handleFind();
   }, [tasks]);
@@ -29,11 +35,17 @@ function TaskList() {
             </tr>
           </thead>
             {
-              tasks.map(({ task, category }, i) => (
-              <tbody key={ i }>
+              tasks.map(({ _id, task, category }) => (
+              <tbody key={ _id }>
                 <tr>
                   <td>{ task }</td>
                   <td>{ category }</td>
+                  <button
+                    type="button"
+                    onClick={ () => handleDelete(_id) }
+                  >
+                    eliminar
+                  </button>
                 </tr>
               </tbody>
               ))
