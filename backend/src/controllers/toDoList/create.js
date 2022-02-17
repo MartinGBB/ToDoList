@@ -1,4 +1,3 @@
-// const { StatusCodes } = require('http-status-codes');
 const service = require('../../service');
 
 module.exports = async (req, res, next) => {
