@@ -1,5 +1,6 @@
-import fetchApi from "../../utils/fetch";
 import { useState, useEffect } from 'react';
+import fetchApi from "../../utils/fetch";
+import { Table } from './style';
 
 function TaskList() {
   const [tasks, setTasks] = useState([]);
@@ -20,7 +21,7 @@ function TaskList() {
   if (isLoading) return <h1>Loading</h1>;
   return (
     <div>
-        <table>
+        <Table>
           <thead>
             <tr>
               <th>Tarefa</th>
@@ -37,7 +38,7 @@ function TaskList() {
               </tbody>
               ))
             }
-          </table>
+          </Table>
     </div>
   );
 }
