@@ -4,7 +4,7 @@ const { EMPTY_TASK, EMPTY_CATEGORY } = require('../../statusCode');
 const validateData = ({ task, category }) => {
   if (!task) return EMPTY_TASK;
   if (!category) return EMPTY_CATEGORY;
-  return true;
+  return {};
 }
 
 module.exports = async (data) => {
