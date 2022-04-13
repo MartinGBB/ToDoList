@@ -1,27 +1,42 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  margin: auto;
+  display: flex;
+  justify-content: center;
+`;
+
 export const Table = styled.table`
-  aling-itens: center;
-  
+  /* aling-itens: center;
   text-align: left;
   display: flex;
   display: block;
-  margin: auto;
-  width: 100%;
-  padding: 15px 1px;
+  /* margin: auto; */
+  width: 80%;
+  padding: 30px 1px;
+  /* display: block; */
+  /* justify-content: space-between; */
+  text-align: left;
+  flex-wrap: wrap;
+
   }
 
   & th {
-  text-align: left;
-    font-size: 20px;
-    padding: 15px 5px;
-    width: 200px;
+  /* text-align: left; */
+    /* font-size: 20px; */
+    /* width: auto; */
+    /* padding: 15px 5px; */
+    /* width: 200px; */
   }
 
   & td {
-    width: 300px;
-    text-aling: left;
-    padding: 10px;
+    width: 20px;
+    /* width: auto; */
+    /* width: 9px; */
+    margin: 0;
+    flex-wrap: wrap;
+    /* text-aling: left; */
+    padding: 10px 0;
   }
 
   & button {
@@ -32,11 +47,18 @@ export const Table = styled.table`
     background: snow;
     cursor: pointer;
     box-shadow:0 2px 0 gray;
-  };
+  }
 
   & button:active {
     position: relative;
     top: 3px;
     box-shadow: none;
-}
+
+  }
+
+  @media(max-width: 800px) {
+    font-size: 12px;
+    background: red;
+    width: 90%;
+  }
 `;
