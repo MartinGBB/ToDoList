@@ -12,7 +12,6 @@ export const Table = styled.table`
   padding: 30px 1px;
   text-align: left;
   flex-wrap: wrap;
-
   }
 
   & th {
