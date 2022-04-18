@@ -26,16 +26,17 @@ export const Table = styled.table`
   /* text-align: left; */
     /* font-size: 20px; */
     /* width: auto; */
-    /* padding: 15px 5px; */
+    padding: 0px 1px;
     /* width: 200px; */
   }
 
   & td {
-    width: 20px;
-    /* width: auto; */
+    /* width: 20px; */
+    width: auto;
     /* width: 9px; */
     margin: 0;
     flex-wrap: wrap;
+  justify-content: center;
     /* text-aling: left; */
     padding: 10px 0;
   }
@@ -59,7 +60,6 @@ export const Table = styled.table`
 
   @media(max-width: 800px) {
     font-size: 12px;
-    /* background: red; */
     width: 90%;
   }
 `;
