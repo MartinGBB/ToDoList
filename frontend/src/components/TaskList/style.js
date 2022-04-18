@@ -8,36 +8,22 @@ export const Container = styled.div`
 `;
 
 export const Table = styled.table`
-  /* aling-itens: center;
-  text-align: left;
-  display: flex;
-  display: block;
-  /* margin: auto; */
   width: 80%;
   padding: 30px 1px;
-  /* display: block; */
-  /* justify-content: space-between; */
   text-align: left;
   flex-wrap: wrap;
 
   }
 
   & th {
-  /* text-align: left; */
-    /* font-size: 20px; */
-    /* width: auto; */
     padding: 0px 1px;
-    /* width: 200px; */
   }
 
   & td {
-    /* width: 20px; */
     width: auto;
-    /* width: 9px; */
     margin: 0;
     flex-wrap: wrap;
   justify-content: center;
-    /* text-aling: left; */
     padding: 10px 0;
   }
 
