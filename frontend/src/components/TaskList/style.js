@@ -1,27 +1,29 @@
 import styled from 'styled-components';
 
-export const Table = styled.table`
-  aling-itens: center;
-  
-  text-align: left;
-  display: flex;
-  display: block;
+export const Container = styled.div`
   margin: auto;
-  width: 100%;
-  padding: 15px 1px;
+  display: flex;
+  justify-content: center;
+  width: 80;
+`;
+
+export const Table = styled.table`
+  width: 80%;
+  padding: 30px 1px;
+  text-align: left;
+  flex-wrap: wrap;
   }
 
   & th {
-  text-align: left;
-    font-size: 20px;
-    padding: 15px 5px;
-    width: 200px;
+    padding: 0px 1px;
   }
 
   & td {
-    width: 300px;
-    text-aling: left;
-    padding: 10px;
+    width: auto;
+    margin: 0;
+    flex-wrap: wrap;
+  justify-content: center;
+    padding: 10px 0;
   }
 
   & button {
@@ -32,11 +34,17 @@ export const Table = styled.table`
     background: snow;
     cursor: pointer;
     box-shadow:0 2px 0 gray;
-  };
+  }
 
   & button:active {
     position: relative;
     top: 3px;
     box-shadow: none;
-}
+
+  }
+
+  @media(max-width: 800px) {
+    font-size: 12px;
+    width: 90%;
+  }
 `;

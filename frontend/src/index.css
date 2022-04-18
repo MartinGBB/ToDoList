@@ -1,4 +1,13 @@
+:root {
+  --main-bg-color: #292F36;
+  --secundary-bg-color: #4ECDC4;
+  --third-bg-color: #F4F4F2;
+  --fourth-bg-color: #FF6B6B;
+}
+
+
 body {
+  background-color: var(--third-bg-color);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

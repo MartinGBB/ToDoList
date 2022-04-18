@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const Content = styled.form`
-  background-color: blue;
+  background-color: var(--main-bg-color);
+  border-bottom: 2px solid var(--secundary-bg-color);
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 24px 28px;
 
   & input {
