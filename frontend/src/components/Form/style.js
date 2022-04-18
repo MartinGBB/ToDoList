@@ -4,6 +4,7 @@ export const Content = styled.form`
   background-color: blue;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 24px 28px;
 
   & input {

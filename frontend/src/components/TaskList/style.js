@@ -4,6 +4,7 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   justify-content: center;
+  width: 80;
 `;
 
 export const Table = styled.table`
@@ -58,7 +59,7 @@ export const Table = styled.table`
 
   @media(max-width: 800px) {
     font-size: 12px;
-    background: red;
+    /* background: red; */
     width: 90%;
   }
 `;

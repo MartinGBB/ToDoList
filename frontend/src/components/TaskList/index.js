@@ -27,34 +27,34 @@ function TaskList() {
   if (isLoading) return <h1>Loading</h1>;
   return (
     <Container>
-        <Table>
-          <thead>
-            <tr>
-              <th>Tarefa</th>
-              <th>Categoria</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-            {
-              tasks.map(({ _id, task, category, status }) => (
-              <tbody key={ _id }>
-                <tr>
-                  <td>{ task }</td>
-                  <td>{ category }</td>
-                  <td>{ status }</td>
-                  <td>
-                  <button
-                    type="button"
-                    onClick={ () => handleDelete(_id) }
-                  >
-                    eliminar
-                  </button>
-                  </td>
-                </tr>
-              </tbody>
-              ))
-            }
-          </Table>
+      <Table>
+        <thead>
+          <tr>
+            <th>Tarefa</th>
+            <th>Categoria</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+          {
+            tasks.map(({ _id, task, category, status }) => (
+            <tbody key={ _id }>
+              <tr>
+                <td>{ task }</td>
+                <td>{ category }</td>
+                <td>{ status }</td>
+                <td>
+                <button
+                  type="button"
+                  onClick={ () => handleDelete(_id) }
+                >
+                  eliminar
+                </button>
+                </td>
+              </tr>
+            </tbody>
+            ))
+          }
+        </Table>
     </Container>
   );
 }
