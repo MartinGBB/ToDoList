@@ -20,6 +20,13 @@ function TaskList() {
     return fetchApi(route, method);
   }
 
+  const handleEdit = async (id, data) => {
+    console.log(id, data)
+    // const route = `/${id}`;
+    // const method = "PUT";
+    // return fetchApi(route, method, data);
+  }
+
   useEffect(() => {
     handleFind();
   }, [tasks]);
@@ -49,6 +56,14 @@ function TaskList() {
                 >
                   eliminar
                 </button>
+
+                <input
+                  type="checkbox"
+                  value={ _id }
+                  name={ task }
+                  onChange={ () => handleEdit(_id) }
+                 
+                />
                 </td>
               </tr>
             </tbody>
