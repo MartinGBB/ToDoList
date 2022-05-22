@@ -13,6 +13,7 @@ function Form() {
     const route = "/";
     const method = "POST";
     const request = await fetchApi(route, method, data);
+    setTask('')
     return request;
   };
 
@@ -23,7 +24,8 @@ function Form() {
         placeholder="Crie sua tarefa"
         name="task"
         value={ task }
-        onChange={ ({ target: { value } }) => setTask(value) }
+        autocomplete="off"
+        onChange={ ( { target: { value } }) => setTask(value) }
       />
       <select
         name="category"
