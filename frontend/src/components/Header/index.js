@@ -5,7 +5,7 @@ import {
 function Header() {
   return (
     <Container>
-      <h1>ToDo</h1>
+      <h1>ToDoList</h1>
     </Container>
   );
 }
