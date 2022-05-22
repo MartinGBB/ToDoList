@@ -1,22 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+
 :root {
   --main-bg-color: #292F36;
-  --secundary-bg-color: #4ECDC4;
-  --third-bg-color: #F4F4F2;
+  --secundary-bg-color: #4ecdc4;
+  --third-bg-color: #f4f4f2ea;
   --fourth-bg-color: #FF6B6B;
 }
 
-
 body {
-  background-color: var(--third-bg-color);
+  color: rgb(83, 83, 83);
+  background-color: var(--main-bg-color);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

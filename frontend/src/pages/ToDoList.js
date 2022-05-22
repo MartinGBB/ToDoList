@@ -1,12 +1,15 @@
 import Form from '../components/Form';
 import TaskList from '../components/TaskList';
+import {
+  Container,
+} from './style';
 
 function ToDoList() {
   return (
-    <div>
+    <Container>
       <Form />
       <TaskList />
-    </div>
+    </Container>
   );
 }
 
