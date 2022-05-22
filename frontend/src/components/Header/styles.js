@@ -5,4 +5,5 @@ export const Container = styled.form`
   border-bottom: 2px solid var(--main-bg-color);
   height: 100%;
   color: white;
+  font-family: 'Grape Nuts', cursive;
   `;
