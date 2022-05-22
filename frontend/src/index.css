@@ -1,7 +1,7 @@
 :root {
   --main-bg-color: #292F36;
   --secundary-bg-color: #4ECDC4;
-  --third-bg-color: #F4F4F2;
+  --third-bg-color: #f4f4f2bb;
   --fourth-bg-color: #FF6B6B;
 }
 
@@ -14,9 +14,4 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

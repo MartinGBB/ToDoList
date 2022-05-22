@@ -3,9 +3,10 @@ import styled from 'styled-components';
 export const Content = styled.form`
   background-color: var(--main-bg-color);
   border-bottom: 2px solid var(--secundary-bg-color);
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
+  border-radius: 10px 10px 0 0;
   padding: 24px 28px;
 
   & input {
@@ -14,7 +15,7 @@ export const Content = styled.form`
     border: 1px solid #bbb;
     border-radius: 3px;
     margin: 5px;
-    box-shadow:0 2px 0 gray;
+    box-shadow:0 2px 0 var(--secundary-bg-color);
   };
 
   & select {
@@ -24,7 +25,7 @@ export const Content = styled.form`
     border-radius: 3px;
     background: snow;
     margin: 5px;
-    box-shadow:0 2px 0 gray;
+    box-shadow:0 2px 0 var(--secundary-bg-color);
   };
   
   & button {
@@ -35,7 +36,7 @@ export const Content = styled.form`
     background: snow;
     margin: 5px;
     cursor: pointer;
-    box-shadow:0 2px 0 gray;
+    box-shadow:0 2px 0 var(--secundary-bg-color);
   };
 
   & button:active {

@@ -4,6 +4,7 @@ import { Table, Container } from './style';
 
 function TaskList() {
   const [tasks, setTasks] = useState([]);
+  const [taskId, setTaskId] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
   const handleFind = async () => {
@@ -13,23 +14,24 @@ function TaskList() {
     setTasks(response);
     setIsLoading(false);
   };
-
-  const handleDelete = async (id) => {
-    const route = `/${id}`;
+  
+  console.log(taskId)
+  const handleDelete = async () => {
+    const route = `/${taskId}`;
     const method = "DELETE";
     return fetchApi(route, method);
   }
 
-  const handleEdit = async (id, data) => {
-    console.log(id, data)
-    // const route = `/${id}`;
-    // const method = "PUT";
-    // return fetchApi(route, method, data);
-  }
+  // const handleEdit = async (id, data) => {
+  //   console.log(id, data)
+  //   // const route = `/${id}`;
+  //   // const method = "PUT";
+  //   // return fetchApi(route, method, data);
+  // }
 
   useEffect(() => {
-    handleFind();
-  }, [tasks]);
+    handleFind()
+}, []);
 
   if (isLoading) return <h1>Loading</h1>;
   return (
@@ -44,26 +46,25 @@ function TaskList() {
         </thead>
           {
             tasks.map(({ _id, task, category, status }) => (
-            <tbody key={ _id }>
+              <tbody key={ _id }>
               <tr>
                 <td>{ task }</td>
                 <td>{ category }</td>
                 <td>{ status }</td>
                 <td>
-                <button
-                  type="button"
-                  onClick={ () => handleDelete(_id) }
-                >
-                  eliminar
-                </button>
+                  <button
+                    type="button"
+                    onClick={ () => handleDelete() }
+                  >
+                    eliminar
+                  </button>
 
-                <input
-                  type="checkbox"
-                  value={ _id }
-                  name={ task }
-                  onChange={ () => handleEdit(_id) }
-                 
-                />
+                  <input
+                    type="checkbox"
+                    value={ _id }
+                    name={ task }
+                    onChange={ () => setTaskId(_id) }
+                  />
                 </td>
               </tr>
             </tbody>

@@ -4,15 +4,14 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   justify-content: center;
-  width: 80;
+  width: 80%;
 `;
 
 export const Table = styled.table`
   width: 80%;
   padding: 30px 1px;
-  text-align: left;
-  flex-wrap: wrap;
-  }
+  /* text-align: left; */
+  margin: auto;
 
   & th {
     padding: 0px 1px;
