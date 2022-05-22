@@ -4,13 +4,15 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   justify-content: center;
-  width: 80%;
+  width: 100%;
+  background-color: var(--third-bg-color);
+
 `;
 
 export const Table = styled.table`
   width: 80%;
   padding: 30px 1px;
-  /* text-align: left; */
+  text-align: left;
   margin: auto;
 
   & th {

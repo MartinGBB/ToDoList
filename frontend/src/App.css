@@ -1,5 +1,5 @@
 .App {
   display: grid;
   text-align: center;
-  background-color: var(--fourth-bg-color);
+  background-color: var(--main-bg-color);
 };

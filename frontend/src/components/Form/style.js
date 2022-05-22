@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const Content = styled.form`
-  background-color: var(--main-bg-color);
-  border-bottom: 2px solid var(--secundary-bg-color);
+  background-color: #1d5064e0;
+  border-bottom: 1px solid #1d5064e0;
   /* display: flex; */
   align-items: center;
   justify-content: center;
   border-radius: 10px 10px 0 0;
-  padding: 24px 28px;
+  padding: 18px 30px;
 
   & input {
     width: 25%;
@@ -15,7 +15,7 @@ export const Content = styled.form`
     border: 1px solid #bbb;
     border-radius: 3px;
     margin: 5px;
-    box-shadow:0 2px 0 var(--secundary-bg-color);
+    box-shadow:0 2px 0 #1d5064e0;
   };
 
   & select {
@@ -25,7 +25,7 @@ export const Content = styled.form`
     border-radius: 3px;
     background: snow;
     margin: 5px;
-    box-shadow:0 2px 0 var(--secundary-bg-color);
+    box-shadow:0 2px 0 #1d5064e0;
   };
   
   & button {
@@ -36,7 +36,7 @@ export const Content = styled.form`
     background: snow;
     margin: 5px;
     cursor: pointer;
-    box-shadow:0 2px 0 var(--secundary-bg-color);
+    box-shadow:0 2px 0 #1d5064e0;
   };
 
   & button:active {
