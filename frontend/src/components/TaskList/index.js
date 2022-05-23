@@ -4,7 +4,7 @@ import { Table, Container } from './style';
 
 function TaskList() {
   const [tasks, setTasks] = useState([]);
-  const [taskId, setTaskId] = useState('');
+  const [taskId, setTaskId] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const handleFind = async () => {
@@ -15,11 +15,23 @@ function TaskList() {
     setIsLoading(false);
   };
   
-  console.log(taskId)
-  const handleDelete = async () => {
-    const route = `/${taskId}`;
+  const handleDelete = async (id) => {
+    const route = `/${id}`;
     const method = "DELETE";
     return fetchApi(route, method);
+  }
+
+  const buttonDelete = () => {
+    if (taskId.length >= 1) {
+      return (
+        <button
+          type="button"
+          onClick={ () => handleDelete(taskId) }
+        >
+          x
+        </button>
+      )
+    }
   }
 
   // const handleEdit = async (id, data) => {
@@ -43,33 +55,25 @@ function TaskList() {
             <th>Tarefa</th>
             <th>Categoria</th>
             <th>Status</th>
+            <th>{ buttonDelete() }</th>
           </tr>
         </thead>
           {
-            tasks.map(({ _id, task, category, status }) => (
-              <tbody key={ _id }>
+            tasks.map(({ _id: id, task, category, status }) => (
+              <tbody key={ id }>
               <tr>
                 <td>
                 <input
                     type="checkbox"
-                    value={ _id }
+                    value={ id }
                     name={ task }
-                    onChange={ () => setTaskId(_id) }
+                    onChange={ () => setTaskId(id) }
                   />
                 </td>
                 <td>{ task }</td>
                 <td>{ category }</td>
                 <td>{ status }</td>
-                <td>
-                  <button
-                    type="button"
-                    onClick={ () => handleDelete() }
-                  >
-                    eliminar
-                  </button>
 
-
-                </td>
               </tr>
             </tbody>
             ))
