@@ -20,11 +20,10 @@ function Form() {
   return (
     <Content>
       <input
-        autoComplete="false"
         placeholder="Crie sua tarefa"
         name="task"
         value={ task }
-        autocomplete="off"
+        autoComplete="off"
         onChange={ ( { target: { value } }) => setTask(value) }
       />
       <select
