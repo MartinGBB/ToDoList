@@ -4,7 +4,6 @@ import { Table, Container } from './style';
 
 function TaskList() {
   const [tasks, setTasks] = useState([]);
-  const [taskId, setTaskId] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const handleFind = async () => {
@@ -15,24 +14,11 @@ function TaskList() {
     setIsLoading(false);
   };
   
-  const handleDelete = async (id) => {
-    const route = `/${id}`;
-    const method = "DELETE";
-    return fetchApi(route, method);
-  }
-
-  const buttonDelete = () => {
-    if (taskId.length >= 1) {
-      return (
-        <button
-          type="button"
-          onClick={ () => handleDelete(taskId) }
-        >
-          x
-        </button>
-      )
-    }
-  }
+  // const handleDelete = async (id) => {
+  //   const route = `/${id}`;
+  //   const method = "DELETE";
+  //   return fetchApi(route, method);
+  // }
 
   // const handleEdit = async (id, data) => {
   //   console.log(id, data)
@@ -55,7 +41,6 @@ function TaskList() {
             <th>Tarefa</th>
             <th>Categoria</th>
             <th>Status</th>
-            <th>{ buttonDelete() }</th>
           </tr>
         </thead>
           {
@@ -64,10 +49,10 @@ function TaskList() {
               <tr>
                 <td>
                 <input
-                    type="checkbox"
-                    value={ id }
+                    type="button"
+                    value='edit'
                     name={ task }
-                    onChange={ () => setTaskId(id) }
+                    // onClick={ () =>  }
                   />
                 </td>
                 <td>{ task }</td>

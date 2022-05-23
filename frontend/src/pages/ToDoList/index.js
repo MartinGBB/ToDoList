@@ -1,8 +1,8 @@
-import Form from '../components/Form';
-import TaskList from '../components/TaskList';
+import Form from '../../components/Form';
+import TaskList from '../../components/TaskList';
 import {
   Container,
-} from './style';
+} from './styles';
 
 function ToDoList() {
   return (
