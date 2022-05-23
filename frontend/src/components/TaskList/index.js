@@ -39,6 +39,7 @@ function TaskList() {
       <Table>
         <thead>
           <tr>
+            <th>&nbsp;</th>
             <th>Tarefa</th>
             <th>Categoria</th>
             <th>Status</th>
@@ -48,6 +49,14 @@ function TaskList() {
             tasks.map(({ _id, task, category, status }) => (
               <tbody key={ _id }>
               <tr>
+                <td>
+                <input
+                    type="checkbox"
+                    value={ _id }
+                    name={ task }
+                    onChange={ () => setTaskId(_id) }
+                  />
+                </td>
                 <td>{ task }</td>
                 <td>{ category }</td>
                 <td>{ status }</td>
@@ -59,12 +68,7 @@ function TaskList() {
                     eliminar
                   </button>
 
-                  <input
-                    type="checkbox"
-                    value={ _id }
-                    name={ task }
-                    onChange={ () => setTaskId(_id) }
-                  />
+
                 </td>
               </tr>
             </tbody>
