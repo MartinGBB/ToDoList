@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import TaskDetails from '../../pages/TaskDetails';
 import fetchApi from "../../utils/fetch";
 import { Table, Container } from './style';
 
@@ -48,12 +49,13 @@ function TaskList() {
               <tbody key={ id }>
               <tr>
                 <td>
-                <input
+                <button
                     type="button"
-                    value='edit'
-                    name={ task }
-                    // onClick={ () =>  }
-                  />
+                    name="edit"
+                    // onClick={  } // usar react-router-dom
+                  >
+                    Edit
+                  </button>
                 </td>
                 <td>{ task }</td>
                 <td>{ category }</td>
