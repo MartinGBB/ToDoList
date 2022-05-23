@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
+import TaskDetails from '../../pages/TaskDetails';
 import fetchApi from "../../utils/fetch";
 import { Table, Container } from './style';
 
 function TaskList() {
   const [tasks, setTasks] = useState([]);
-  const [taskId, setTaskId] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
   const handleFind = async () => {
@@ -15,12 +15,11 @@ function TaskList() {
     setIsLoading(false);
   };
   
-  console.log(taskId)
-  const handleDelete = async () => {
-    const route = `/${taskId}`;
-    const method = "DELETE";
-    return fetchApi(route, method);
-  }
+  // const handleDelete = async (id) => {
+  //   const route = `/${id}`;
+  //   const method = "DELETE";
+  //   return fetchApi(route, method);
+  // }
 
   // const handleEdit = async (id, data) => {
   //   console.log(id, data)
@@ -39,33 +38,29 @@ function TaskList() {
       <Table>
         <thead>
           <tr>
+            <th>&nbsp;</th>
             <th>Tarefa</th>
             <th>Categoria</th>
             <th>Status</th>
           </tr>
         </thead>
           {
-            tasks.map(({ _id, task, category, status }) => (
-              <tbody key={ _id }>
+            tasks.map(({ _id: id, task, category, status }) => (
+              <tbody key={ id }>
               <tr>
+                <td>
+                <button
+                    type="button"
+                    name="edit"
+                    // onClick={  } // usar react-router-dom
+                  >
+                    Edit
+                  </button>
+                </td>
                 <td>{ task }</td>
                 <td>{ category }</td>
                 <td>{ status }</td>
-                <td>
-                  <button
-                    type="button"
-                    onClick={ () => handleDelete() }
-                  >
-                    eliminar
-                  </button>
 
-                  <input
-                    type="checkbox"
-                    value={ _id }
-                    name={ task }
-                    onChange={ () => setTaskId(_id) }
-                  />
-                </td>
               </tr>
             </tbody>
             ))
