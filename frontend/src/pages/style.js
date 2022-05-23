@@ -5,5 +5,5 @@ export const Container = styled.div`
   width: 90%;
   background-color: var(--third-bg-color);
   border-radius: 10px;
-  margin-top: 1%;
+  margin-top: 1rem;
 `;
