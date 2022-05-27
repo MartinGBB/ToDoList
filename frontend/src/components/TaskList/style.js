@@ -6,7 +6,6 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   background-color: var(--third-bg-color);
-
 `;
 
 export const Table = styled.table`
@@ -23,29 +22,33 @@ export const Table = styled.table`
     width: auto;
     margin: 0;
     flex-wrap: wrap;
-  justify-content: center;
+    justify-content: center;
     padding: 10px 0;
+  }
+
+  & .icon-button {
+    width: 1.5em;
   }
 
   & button {
     width: auto;
-    padding: 5px;
-    border: 1px solid #bbb;
-    border-radius: 3px;
-    background: snow;
+    background-color: transparent;
+    border: transparent;
     cursor: pointer;
-    box-shadow:0 2px 0 gray;
   }
 
   & button:active {
     position: relative;
     top: 3px;
     box-shadow: none;
-
   }
-
+  
   @media(max-width: 800px) {
     font-size: 12px;
     width: 90%;
   }
+  `;
+
+export const Icon = styled.img`
+  width: 2em;
 `;
