@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
-import TaskDetails from '../../pages/TaskDetails';
+import { Navigate } from "react-router-dom";
 import fetchApi from "../../utils/fetch";
-import { Table, Container } from './style';
+import { Table, Container, Icon } from "./style";
+import detailsImg from "../../Images/details-btn.png";
 
 function TaskList() {
   const [tasks, setTasks] = useState([]);
+  const [redirect, setRedirect] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   const handleFind = async () => {
@@ -27,6 +29,9 @@ function TaskList() {
   //   // const method = "PUT";
   //   // return fetchApi(route, method, data);
   // }
+  const handleEdit = () => (
+    setRedirect(true)
+  )
 
   useEffect(() => {
     handleFind()
@@ -48,14 +53,15 @@ function TaskList() {
             tasks.map(({ _id: id, task, category, status }) => (
               <tbody key={ id }>
               <tr>
-                <td>
-                <button
+                <td className="icon-button">
+                  <button
                     type="button"
                     name="edit"
-                    // onClick={  } // usar react-router-dom
+                    onClick={ () => handleEdit() }
                   >
-                    Edit
+                    <Icon src={ detailsImg } alt="details" />
                   </button>
+                  { redirect && <Navigate to="edit-task" /> }
                 </td>
                 <td>{ task }</td>
                 <td>{ category }</td>

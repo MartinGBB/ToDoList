@@ -2,11 +2,11 @@ import {
   Container,
 } from './styles';
 
-function TaskDetails(id) {
+function TaskDetails() {
   return (
     <Container>
-      <h1>Edit { id }</h1>
-      {console.log('estou vivo')}
+      <h1>Details Task</h1>
+      {console.log('Hello World')}
     </Container>
   );
 }
