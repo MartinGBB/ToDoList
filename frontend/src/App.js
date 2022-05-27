@@ -11,7 +11,7 @@ function App() {
         <Routes>
           {/* <Header /> */}
           <Route path="/" element={<ToDoList />} />
-          <Route path="edit-task" element={<TaskDetails />} />
+          <Route path="/edit-task" element={<TaskDetails />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import { Navigate } from "react-router-dom";
 import fetchApi from "../../utils/fetch";
 import { Table, Container } from './style';
 
 function TaskList() {
   const [tasks, setTasks] = useState([]);
+  const [details, setDetails] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   const handleFind = async () => {
@@ -26,6 +28,9 @@ function TaskList() {
   //   // const method = "PUT";
   //   // return fetchApi(route, method, data);
   // }
+  const handleEdit = () => {
+    setDetails(true)
+  }
 
   useEffect(() => {
     handleFind()
@@ -51,10 +56,11 @@ function TaskList() {
                 <button
                     type="button"
                     name="edit"
-                    // onClick={  } // usar react-router-dom
+                    onClick={ () => handleEdit() } // usar react-router-dom
                   >
                     Edit
                   </button>
+                  { details && <Navigate to="edit-task" /> }
                 </td>
                 <td>{ task }</td>
                 <td>{ category }</td>
