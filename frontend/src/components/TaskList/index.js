@@ -5,7 +5,7 @@ import { Table, Container } from './style';
 
 function TaskList() {
   const [tasks, setTasks] = useState([]);
-  const [details, setDetails] = useState(false);
+  const [redirect, setRedirect] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   const handleFind = async () => {
@@ -28,9 +28,9 @@ function TaskList() {
   //   // const method = "PUT";
   //   // return fetchApi(route, method, data);
   // }
-  const handleEdit = () => {
-    setDetails(true)
-  }
+  const handleEdit = () => (
+    setRedirect(true)
+  )
 
   useEffect(() => {
     handleFind()
@@ -56,11 +56,11 @@ function TaskList() {
                 <button
                     type="button"
                     name="edit"
-                    onClick={ () => handleEdit() } // usar react-router-dom
+                    onClick={ () => handleEdit() }
                   >
                     Edit
                   </button>
-                  { details && <Navigate to="edit-task" /> }
+                  { redirect && <Navigate to="edit-task" /> }
                 </td>
                 <td>{ task }</td>
                 <td>{ category }</td>
