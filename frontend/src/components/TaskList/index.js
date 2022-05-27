@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import TaskDetails from '../../pages/TaskDetails';
 import fetchApi from "../../utils/fetch";
 import { Table, Container } from './style';
 
