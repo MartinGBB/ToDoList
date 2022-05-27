@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Navigate } from "react-router-dom";
 import fetchApi from "../../utils/fetch";
-import { Table, Container } from './style';
+import { Table, Container, Img } from "./style";
+import detailsImg from "../../Images/details-btn.png";
 
 function TaskList() {
   const [tasks, setTasks] = useState([]);
@@ -53,12 +54,12 @@ function TaskList() {
               <tbody key={ id }>
               <tr>
                 <td>
-                <button
+                  <button
                     type="button"
                     name="edit"
                     onClick={ () => handleEdit() }
                   >
-                    Edit
+                    <Img src={ detailsImg } alt="details" />
                   </button>
                   { redirect && <Navigate to="edit-task" /> }
                 </td>
