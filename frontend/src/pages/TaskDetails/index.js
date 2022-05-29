@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   Container,
 } from './styles';
@@ -8,11 +8,12 @@ import {
 // }
 
 function TaskDetails() {
+  let { taskId } = useParams();
   let navigate = useNavigate();
   return (
     <Container>
       <h1>Details Task</h1>
-      {console.log('Hello World')}
+      {console.log(taskId)}
 
       <div>
         <button
