@@ -1,11 +1,9 @@
 import { useNavigate, useParams } from "react-router-dom";
-import {
-  Container,
-} from './styles';
+import { Container } from './styles';
 
-// const handleButton = () => {
-  
-// }
+const handleButton = ({ target: { name } }) => {
+  console.log(`clicou: ${name}`)
+}
 
 function TaskDetails() {
   let { taskId } = useParams();
@@ -19,13 +17,14 @@ function TaskDetails() {
         <button
           type="button"
           name="cancelar"
-          onClick={ () => navigate(-1) }
+          onClick={ (event) => handleButton(event) }
         >
           cancelar
         </button>
         <button
           type="button"
           name="aceptar"
+          onClick={ (event) => handleButton(event) }
         >
           aceptar
         </button>
