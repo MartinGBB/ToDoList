@@ -18,17 +18,6 @@ function TaskList() {
     setIsLoading(false);
   };
 
-  // const handleEdit = async (id, data) => {
-  //   console.log(id, data)
-  //   // const route = `/${id}`;
-  //   // const method = "PUT";
-  //   // return fetchApi(route, method, data);
-  // }
-  // const handleEdit = () => {
-  //   console.log('edit')
-  //   setRedirect(true)
-  // }
-
   useEffect(() => {
     handleFind()
 }, []);
