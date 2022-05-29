@@ -26,8 +26,6 @@ function TaskList() {
   return (
     <Container>
       <Table>
-      {console.log('Hello')}
-
         <thead>
           <tr>
             <th>&nbsp;</th>

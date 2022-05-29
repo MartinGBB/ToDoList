@@ -19,7 +19,6 @@ function TaskDetails() {
   };
 
     const handleEdit = async (id, data) => {
-    console.log(id, data)
     const route = `/${id}`;
     const method = "PUT";
     fetchApi(route, method, data);
@@ -35,7 +34,6 @@ function TaskDetails() {
   return (
     <Container>
       <h1>Details Task</h1>
-      {console.log(taskId)}
 
       <button
         type="button"
