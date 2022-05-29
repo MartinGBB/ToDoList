@@ -8,7 +8,6 @@ function TaskList() {
   let navigate = useNavigate();
 
   const [tasks, setTasks] = useState([]);
-  // const [redirect, setRedirect] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   const handleFind = async () => {
