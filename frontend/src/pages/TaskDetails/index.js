@@ -13,11 +13,17 @@ function TaskDetails() {
     navigate(-1);
   };
 
-  
+    const handleEdit = async (id, data) => {
+    console.log(id, data)
+    const route = `/${id}`;
+    const method = "PUT";
+    return fetchApi(route, method, data);
+  }
+
   const handleButton = ({ target: { name } }) => {
     if (name === 'return') return navigate(-1);
     if (name === 'remove') return handleDelete(taskId);
-    
+    if (name === 'save') return handleEdit(taskId)
   }
 
   return (
