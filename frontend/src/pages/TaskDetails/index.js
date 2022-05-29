@@ -6,8 +6,8 @@ function TaskDetails() {
   let { taskId } = useParams();
   
   const handleButton = ({ target: { name } }) => {
-    if (name === 'cancelar') return navigate(-1)
-    console.log(`clicou: ${name}`)
+    if (name === 'return') return navigate(-1);
+    
   }
 
   return (
@@ -18,17 +18,26 @@ function TaskDetails() {
       <div>
         <button
           type="button"
-          name="cancelar"
+          name="return"
           onClick={ (event) => handleButton(event) }
         >
-          cancelar
+          return
         </button>
+
         <button
           type="button"
-          name="aceptar"
+          name="remove"
           onClick={ (event) => handleButton(event) }
         >
-          aceptar
+          remove
+        </button>
+
+        <button
+          type="button"
+          name="save"
+          onClick={ (event) => handleButton(event) }
+        >
+          save
         </button>
       </div>
     </Container>
