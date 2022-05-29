@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
 import fetchApi from "../../utils/fetch";
 import { Table, Container, Icon } from "./style";
 import detailsImg from "../../Images/details-btn.png";
@@ -7,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 
 function TaskList() {
   let navigate = useNavigate();
-  let params = useParams();;
 
   const [tasks, setTasks] = useState([]);
   // const [redirect, setRedirect] = useState(false);
@@ -68,7 +66,6 @@ function TaskList() {
                   >
                     <Icon src={ detailsImg } alt="details" />
                   </button>
-                  {/* { redirect && <Navigate to="/edit-task" /> } */}
                 </td>
                 <td>{ task }</td>
                 <td>{ category }</td>
