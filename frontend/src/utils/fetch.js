@@ -3,18 +3,8 @@
 const fetchApi = async (route, method, data) => {
   const url = `http://localhost:3001${route}`;
   const body = JSON.stringify(data);
-  let config = {};
   
-  if (!data) {
-      config = {
-          method,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    };
-  };
-  
-  config = {
+  const config = {
     method,
     headers: {
       'Content-Type': 'application/json',

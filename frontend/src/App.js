@@ -1,3 +1,4 @@
+import { Navigate } from "react-router-dom";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import './App.css';
 import Header from './components/Header';
@@ -10,8 +11,9 @@ function App() {
       <Header />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ToDoList />} />
-          <Route path="/edit-task" element={<TaskDetails />} />
+          <Route path="/" element={ <Navigate to="/tasks" /> } />
+          <Route path="tasks" element={<ToDoList />} />
+          <Route path="/tasks/:taskId" element={<TaskDetails />} />
         </Routes>
       </BrowserRouter>
     </div>
