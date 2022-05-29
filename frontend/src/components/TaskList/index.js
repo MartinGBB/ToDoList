@@ -17,12 +17,6 @@ function TaskList() {
     setTasks(response);
     setIsLoading(false);
   };
-  
-  // const handleDelete = async (id) => {
-  //   const route = `/${id}`;
-  //   const method = "DELETE";
-  //   return fetchApi(route, method);
-  // }
 
   // const handleEdit = async (id, data) => {
   //   console.log(id, data)

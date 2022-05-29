@@ -1,12 +1,22 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { Container } from './styles';
+import fetchApi from "../../utils/fetch";
 
 function TaskDetails() {
   let navigate = useNavigate();
   let { taskId } = useParams();
+
+  const handleDelete = async (id) => {
+    const route = `/${id}`;
+    const method = "DELETE";
+    fetchApi(route, method);
+    navigate(-1);
+  };
+
   
   const handleButton = ({ target: { name } }) => {
     if (name === 'return') return navigate(-1);
+    if (name === 'remove') return handleDelete(taskId);
     
   }
 
