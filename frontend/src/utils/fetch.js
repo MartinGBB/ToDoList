@@ -5,14 +5,14 @@ const fetchApi = async (route, method, data) => {
   const body = JSON.stringify(data);
   let config = {};
   
-  if (!data) {
-      config = {
-          method,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    };
-  };
+  // if (!data) {
+  //     config = {
+  //         method,
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //   };
+  // };
   
   config = {
     method,
