@@ -15,15 +15,15 @@ function TaskDetails() {
       <h1>Details Task</h1>
       {console.log(taskId)}
 
-      <div>
         <button
           type="button"
           name="return"
           onClick={ (event) => handleButton(event) }
-        >
+          >
           return
         </button>
 
+      <div>
         <button
           type="button"
           name="remove"
