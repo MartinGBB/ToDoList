@@ -1,13 +1,15 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { Container } from './styles';
 
-const handleButton = ({ target: { name } }) => {
-  console.log(`clicou: ${name}`)
-}
-
 function TaskDetails() {
-  let { taskId } = useParams();
   let navigate = useNavigate();
+  let { taskId } = useParams();
+  
+  const handleButton = ({ target: { name } }) => {
+    if (name === 'cancelar') return navigate(-1)
+    console.log(`clicou: ${name}`)
+  }
+
   return (
     <Container>
       <h1>Details Task</h1>
