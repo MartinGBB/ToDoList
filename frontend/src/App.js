@@ -10,8 +10,8 @@ function App() {
       <Header />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ToDoList />} />
-          <Route path="/edit-task" element={<TaskDetails />} />
+          <Route path="tasks" element={<ToDoList />} />
+          <Route path="/tasks/:taskId" element={<TaskDetails />} />
         </Routes>
       </BrowserRouter>
     </div>
