@@ -9,7 +9,7 @@ function Form() {
   const [category, setCategory] = useState('Outro');
 
   const handleSubmit = async () => {
-    const data = { task, category };
+    const data = { task, category, status: 'pending' };
     const route = "/";
     const method = "POST";
     const request = await fetchApi(route, method, data);

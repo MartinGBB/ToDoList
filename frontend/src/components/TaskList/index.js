@@ -53,7 +53,7 @@ function TaskList() {
 
               </tr>
             </tbody>
-            ))
+            )).reverse()
           }
         </Table>
     </Container>
