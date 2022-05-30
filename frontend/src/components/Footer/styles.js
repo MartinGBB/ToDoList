@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.form`
   background-color: var(--secundary-bg-color);
-  border-bottom: 2px solid var(--main-bg-color);
-  border-radius: 0px 20px 0px 20px;
+  border-radius: 20px 20px 0 0;
   height: 4rem;
   justify-content: center;
   display: flex;
