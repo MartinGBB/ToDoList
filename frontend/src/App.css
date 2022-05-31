@@ -2,6 +2,6 @@
   display: grid;
   text-align: center;
   background-color: var(--main-bg-color);
-  height: 100%;
+  height: 100vh;
   position: relative;
 };
