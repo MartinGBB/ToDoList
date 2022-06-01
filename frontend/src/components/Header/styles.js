@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.form`
+  grid-row: 1;
   background-color: var(--secundary-bg-color);
   border-bottom: 2px solid var(--main-bg-color);
   border-radius: 0px 0 20px 20px;

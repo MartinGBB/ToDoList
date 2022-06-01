@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  grid-row: 2;
   margin: auto;
   display: flex;
   justify-content: center;
