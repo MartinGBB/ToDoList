@@ -6,6 +6,7 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   background-color: var(--third-bg-color);
+  border-radius: 10px;
   `;
 
 export const Table = styled.table`
