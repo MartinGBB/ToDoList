@@ -1,7 +1,14 @@
 .App {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 66px auto 66px;
+  row-gap: 1rem;
+
   text-align: center;
   background-color: var(--main-bg-color);
+  min-height: auto;
   height: 100%;
+  width: 100%;
   position: relative;
+  justify-content: center;
 };
