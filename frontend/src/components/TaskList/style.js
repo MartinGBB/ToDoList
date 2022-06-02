@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  grid-row: 2;
   margin: auto;
   display: flex;
   justify-content: center;
   width: 100%;
   background-color: var(--third-bg-color);
-`;
+  `;
 
 export const Table = styled.table`
   width: 80%;
