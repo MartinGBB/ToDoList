@@ -11,5 +11,5 @@ export const Container = styled.div`
   border-radius: 10px;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  min-height: 80vh;
+  min-height: 69.2vh;
 `;
