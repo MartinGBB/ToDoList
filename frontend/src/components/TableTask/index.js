@@ -4,7 +4,7 @@ import { Table, Container, Icon } from "./style";
 import detailsImg from "../../Images/details-btn.png";
 import { useNavigate } from "react-router-dom";
 
-function TaskList() {
+function TableTask() {
   let navigate = useNavigate();
 
   const [tasks, setTasks] = useState([]);
@@ -60,4 +60,4 @@ function TaskList() {
   );
 }
 
-export default TaskList;
+export default TableTask;
