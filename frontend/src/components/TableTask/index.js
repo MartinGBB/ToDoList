@@ -3,6 +3,7 @@ import fetchApi from "../../utils/fetch";
 import { Table, Container, Icon } from "./style";
 import detailsImg from "../../Images/details-btn.png";
 import { useNavigate } from "react-router-dom";
+import TaskDetails from '../../pages/TaskDetails';
 
 function TableTask() {
   let navigate = useNavigate();
@@ -55,6 +56,8 @@ function TableTask() {
             </tbody>
             )).reverse()
           }
+          <TaskDetails />
+
         </Table>
     </Container>
   );
