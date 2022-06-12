@@ -1,16 +1,26 @@
 import styled from 'styled-components';
 
 export const Container = styled.div `
+/* width: 45%; */
+  max-width: 35%;
+  min-width: 55%;
   margin: auto;
-  width: 60%;
-  height: 40%;
+  /* height: ; */
   /* background-color: var(--third-bg-color); */
-  background-color: black;
+  background-color: #1d5064c9;
   border-radius: 10px;
-  margin-top: 1.2rem;
+  /* margin-top: 1.2rem; */
   position: fixed;
-  top: 30vh;
-  left: 20vw;
+  top: 35%;
+  left: 20%;
+  right: 20%;
+
+  /* h3 {
+    margin: auto;
+    grid-column-start: 2;
+    grid-column-end: 9;
+    grid-row-start: 1;
+  } */
 
   display: grid;
   grid-template-columns: repeat(10, 10%);

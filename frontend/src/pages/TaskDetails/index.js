@@ -41,7 +41,7 @@ function TaskDetails({ taskId }) {
         return
       </ReturnBtn>
 
-      <h1>Details Task</h1>
+      <h3>Details Task</h3>
 
       <input
         name="task"
