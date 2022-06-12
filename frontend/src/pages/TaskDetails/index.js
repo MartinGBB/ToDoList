@@ -1,6 +1,6 @@
 // import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
-import { Container, ReturnBtn, Button } from './styles';
+import { Container, ReturnBtn, Button, ContainerBtn } from './styles';
 import fetchApi from "../../utils/fetch";
 
 function TaskDetails({ taskId }) {
@@ -52,7 +52,8 @@ function TaskDetails({ taskId }) {
       />
 
       <select
-        name="category"
+        name="category" 
+        className="selectCategory"
         value={ category }
         onChange={ ({ target: { value } }) => setCategory(value) }
       >
@@ -66,6 +67,7 @@ function TaskDetails({ taskId }) {
 
       <select
         name="status"
+        className="selectStatus"
         value={ status }
         onChange={ ({ target: { value } }) => setStatus(value) }
       >
@@ -75,7 +77,7 @@ function TaskDetails({ taskId }) {
         <option value="resolved">Culminada</option>
       </select>
 
-      <div>
+      <ContainerBtn>
         <Button
           type="button"
           name="remove"
@@ -91,7 +93,7 @@ function TaskDetails({ taskId }) {
         >
           save
         </Button>
-      </div>
+      </ContainerBtn>
     </Container>
   );
 }
