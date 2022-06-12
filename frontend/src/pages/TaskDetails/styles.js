@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+
   margin: auto;
   width: 60%;
   height: 40%;
@@ -11,6 +12,10 @@ export const Container = styled.div`
   position: fixed;
   top: 30vh;
   left: 20vw;
+
+  & h1 {
+   margin: 0.3em; 
+  }
 
   & input {
     padding: 0 0.5em;
@@ -27,6 +32,11 @@ export const Container = styled.div`
     display: block;
     margin: 0.7em auto;
   }
-  
-  &
+
+  & button {
+    cursor: pointer;
+    width: 9em;
+    margin: auto 1em;
+    height: 2em;
+  }
 `;
