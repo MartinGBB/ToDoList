@@ -12,6 +12,10 @@ export const Container = styled.div`
   top: 30vh;
   left: 20vw;
 
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(10, 10%);
+
   & input {
     padding: 0 0.5em;
     width: 19em;
