@@ -43,7 +43,7 @@ export const Container = styled.div `
   & input, select {
     grid-column-start: 2;
     grid-column-end: 10;
-    height: 2.3em;
+    height: 2.2em;
     border-radius: 5px;
     display: block;
   }
