@@ -52,9 +52,9 @@ export const Container = styled.div `
 `;
 
 export const ContainerBtn = styled.div `
-    grid-column-start: 2;
-    grid-column-end: 10;
-    grid-row-start: 9;
+  grid-column-start: 2;
+  grid-column-end: 10;
+  grid-row-start: 9;
   display: grid;
   grid-template-columns: 40% 20% 40%;
   /* grid-template-rows: 100%; */
@@ -66,19 +66,12 @@ export const ContainerBtn = styled.div `
   & button:last-child {
     grid-column-start: 3;
   }
-`;
 
-export const Button = styled.button `
-  /* grid-column-start: 2;
-  grid-column-end: 5;
-  grid-row-start: 9; */
-  cursor: pointer;
-  /* margin: auto; */
-  /* width: 9em; */
-  /* margin: auto 1em; */
-  height: 2em;
+  & button {
+    cursor: pointer;
+    height: 2em;
+  }
 `;
-
 
 export const ReturnBtn = styled.button `
   cursor: pointer;

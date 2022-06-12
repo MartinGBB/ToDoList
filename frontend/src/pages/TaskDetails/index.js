@@ -1,6 +1,6 @@
 // import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
-import { Container, ReturnBtn, Button, ContainerBtn } from './styles';
+import { Container, ReturnBtn, ContainerBtn } from './styles';
 import fetchApi from "../../utils/fetch";
 
 function TaskDetails({ taskId }) {
@@ -78,21 +78,21 @@ function TaskDetails({ taskId }) {
       </select>
 
       <ContainerBtn>
-        <Button
+        <button
           type="button"
           name="remove"
           onClick={ (event) => handleButton(event) }
         >
           remove
-        </Button>
+        </button>
 
-        <Button
+        <button
           type="button"
           name="save"
           onClick={ (event) => handleButton(event) }
         >
           save
-        </Button>
+        </button>
       </ContainerBtn>
     </Container>
   );
