@@ -1,32 +1,32 @@
-import { useNavigate, useParams } from "react-router-dom";
+// import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { Container } from './styles';
 import fetchApi from "../../utils/fetch";
 
-function TaskDetails() {
+function TaskDetails({ taskId }) {
   const [task, setTask] = useState("");
   const [category, setCategory] = useState('Otro');
   const [status, setStatus] = useState('Pendente');
   
-  let navigate = useNavigate();
-  let { taskId } = useParams();
+  // let navigate = useNavigate();
+  // let { taskId } = useParams();
 
   const handleDelete = async (id) => {
     const route = `/${id}`;
     const method = "DELETE";
     fetchApi(route, method);
-    navigate(-1);
+    // navigate(-1);
   };
 
     const handleEdit = async (id, data) => {
     const route = `/${id}`;
     const method = "PUT";
     fetchApi(route, method, data);
-    navigate(-1);
+    // navigate(-1);
   }
 
   const handleButton = ({ target: { name } }) => {
-    if (name === 'return') return navigate(-1);
+    // if (name === 'return') return navigate(-1);
     if (name === 'remove') return handleDelete(taskId);
     if (name === 'save') return handleEdit(taskId, { task, category, status })
   }

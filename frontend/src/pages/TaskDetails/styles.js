@@ -6,4 +6,6 @@ export const Container = styled.div`
   background-color: var(--third-bg-color);
   border-radius: 10px;
   margin-top: 1rem;
+  position: fixed;
+  top: 
 `;

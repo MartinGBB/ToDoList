@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 import fetchApi from "../../utils/fetch";
 import { Table, Container, Icon } from "./style";
 import detailsImg from "../../Images/details-btn.png";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import TaskDetails from '../../pages/TaskDetails';
 
 function TableTask() {
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
 
   const [tasks, setTasks] = useState([]);
+  const [taskDetails, setTaskDetails] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   const handleFind = async () => {
@@ -43,7 +44,8 @@ function TableTask() {
                   <button
                     type="button"
                     name="edit"
-                    onClick={ () => navigate(`/tasks/${id}`) }
+                    onClick={ () => setTaskDetails(id) }
+                    // onClick={ () => navigate(`/tasks/${id}`) }
                   >
                     <Icon src={ detailsImg } alt="details" />
                   </button>
@@ -56,9 +58,8 @@ function TableTask() {
             </tbody>
             )).reverse()
           }
-          <TaskDetails />
-
         </Table>
+        { taskDetails && <TaskDetails id={ taskDetails }/> }
     </Container>
   );
 }
