@@ -12,10 +12,6 @@ export const Container = styled.div`
   top: 30vh;
   left: 20vw;
 
-  & h1 {
-   margin: 0.3em; 
-  }
-
   & input {
     padding: 0 0.5em;
     width: 19em;
