@@ -75,7 +75,25 @@ export const ContainerBtn = styled.div `
 
 export const ReturnBtn = styled.button `
   cursor: pointer;
+  width: auto;
+  background-color: transparent;
+  border: transparent; 
+  padding: 0;
   position: absolute;
-  top: 1px;
-  right: 5px;
+  top: 0px;
+  right: 1px;
+
+  & button:active {
+    position: relative;
+    top: 115px;
+    box-shadow: none;
+  }
+
+  & img {
+    margin: auto;
+    width: 2.8em;
+    background-size: cover;
+    /* border-radius: 50px; */
+    /* background: red; */
+  }
 `;

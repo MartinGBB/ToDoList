@@ -1,6 +1,7 @@
 // import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { Container, ReturnBtn, ContainerBtn } from './styles';
+import closeImg from "../../Images/close-btn.png";
 import fetchApi from "../../utils/fetch";
 
 function TaskDetails({ taskId }) {
@@ -38,9 +39,8 @@ function TaskDetails({ taskId }) {
         name="return"
         onClick={ (event) => handleButton(event) }
         >
-        return
+        <img src={ closeImg } alt="close" />
       </ReturnBtn>
-
       <h3>Details Task</h3>
 
       <input
