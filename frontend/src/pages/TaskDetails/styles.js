@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-
   margin: auto;
   width: 60%;
   height: 40%;
@@ -32,11 +31,19 @@ export const Container = styled.div`
     display: block;
     margin: 0.7em auto;
   }
+`;
 
-  & button {
-    cursor: pointer;
-    width: 9em;
-    margin: auto 1em;
-    height: 2em;
-  }
+export const Button = styled.button `
+  cursor: pointer;
+  width: 9em;
+  margin: auto 1em;
+  height: 2em;
+`;
+
+
+export const ReturnBtn = styled.button`
+  cursor: pointer;
+  position: absolute;
+  top: 1px;
+  right: 5px;
 `;

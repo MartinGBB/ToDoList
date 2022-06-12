@@ -1,6 +1,6 @@
 // import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
-import { Container } from './styles';
+import { Container, ReturnBtn, Button } from './styles';
 import fetchApi from "../../utils/fetch";
 
 function TaskDetails({ taskId }) {
@@ -33,15 +33,15 @@ function TaskDetails({ taskId }) {
 
   return (
     <Container>
-      <h1>Details Task</h1>
-
-      <button
+      <ReturnBtn
         type="button"
         name="return"
         onClick={ (event) => handleButton(event) }
         >
         return
-      </button>
+      </ReturnBtn>
+
+      <h1>Details Task</h1>
 
       <input
         name="task"
@@ -76,21 +76,21 @@ function TaskDetails({ taskId }) {
       </select>
 
       <div>
-        <button
+        <Button
           type="button"
           name="remove"
           onClick={ (event) => handleButton(event) }
         >
           remove
-        </button>
+        </Button>
 
-        <button
+        <Button
           type="button"
           name="save"
           onClick={ (event) => handleButton(event) }
         >
           save
-        </button>
+        </Button>
       </div>
     </Container>
   );
