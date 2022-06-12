@@ -25,7 +25,7 @@ export const Container = styled.div`
     height: 2em;
     border-radius: 5px;
     display: block;
-    margin: 0.7em auto;
+    margin: 1em auto;
   }
 `;
 
