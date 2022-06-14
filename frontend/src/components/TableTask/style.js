@@ -6,6 +6,7 @@ export const Container = styled.div`
   width: 100%;
   background-color: var(--third-bg-color);
   border-radius: 10px;
+  position: relative;
 `;
 
 export const Table = styled.table`

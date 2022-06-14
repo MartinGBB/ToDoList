@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
 
 :root {
+  --main-bg-colosr: #1d5064c9;
   --main-bg-color: #292F36;
   --secundary-bg-color: #4ecdc4;
   --third-bg-color: #f4f4f2;

@@ -1,9 +1,13 @@
+import { useState } from "react";
 import { MyContext } from "./Context";
 
 
 const Provider = ({ children }) => {
-  const contextValue = {
+  const [taskDetails, setTaskDetails] = useState();
 
+  const contextValue = {
+    taskDetails,
+    setTaskDetails,
   };
 
   return (

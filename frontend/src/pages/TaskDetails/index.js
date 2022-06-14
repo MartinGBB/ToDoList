@@ -1,47 +1,51 @@
-import { useNavigate, useParams } from "react-router-dom";
-import { useState } from "react";
-import { Container } from './styles';
+// import { useNavigate } from "react-router-dom";
+import { useState, useContext } from "react";
+import { Container, ReturnBtn, ContainerBtn } from './styles';
+import closeImg from "../../Images/close-btn.png";
 import fetchApi from "../../utils/fetch";
+import { MyContext } from '../../components/Hooks/Context';
+import TableTask from "../../components/TableTask";
 
 function TaskDetails() {
   const [task, setTask] = useState("");
   const [category, setCategory] = useState('Otro');
   const [status, setStatus] = useState('Pendente');
   
-  let navigate = useNavigate();
-  let { taskId } = useParams();
-
+  const { taskDetails, setTaskDetails } = useContext(MyContext);
+  // let navigate = useNavigate();
+  // let { taskDetails } = useParams();
+  
   const handleDelete = async (id) => {
     const route = `/${id}`;
     const method = "DELETE";
     fetchApi(route, method);
-    navigate(-1);
+    setTaskDetails(undefined);
   };
 
-    const handleEdit = async (id, data) => {
+  const handleEdit = async (id, data) => {
     const route = `/${id}`;
     const method = "PUT";
     fetchApi(route, method, data);
-    navigate(-1);
+    setTaskDetails(undefined);
   }
-
+  
   const handleButton = ({ target: { name } }) => {
-    if (name === 'return') return navigate(-1);
-    if (name === 'remove') return handleDelete(taskId);
-    if (name === 'save') return handleEdit(taskId, { task, category, status })
+    if (name === 'return') return <TableTask />;
+    if (name === 'remove') return handleDelete(taskDetails);
+    if (name === 'save') return handleEdit(taskDetails, { task, category, status })
+    setTaskDetails(undefined);
   }
-
+  
   return (
     <Container>
-      <h1>Details Task</h1>
-
-      <button
+      <ReturnBtn
         type="button"
         name="return"
         onClick={ (event) => handleButton(event) }
         >
-        return
-      </button>
+        <img src={ closeImg } alt="close" />
+      </ReturnBtn>
+      <h3>Details Task</h3>
 
       <input
         name="task"
@@ -52,7 +56,8 @@ function TaskDetails() {
       />
 
       <select
-        name="category"
+        name="category" 
+        className="selectCategory"
         value={ category }
         onChange={ ({ target: { value } }) => setCategory(value) }
       >
@@ -66,6 +71,7 @@ function TaskDetails() {
 
       <select
         name="status"
+        className="selectStatus"
         value={ status }
         onChange={ ({ target: { value } }) => setStatus(value) }
       >
@@ -75,7 +81,7 @@ function TaskDetails() {
         <option value="resolved">Culminada</option>
       </select>
 
-      <div>
+      <ContainerBtn>
         <button
           type="button"
           name="remove"
@@ -91,7 +97,7 @@ function TaskDetails() {
         >
           save
         </button>
-      </div>
+      </ContainerBtn>
     </Container>
   );
 }
