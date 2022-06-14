@@ -9,7 +9,7 @@ export const Container = styled.div`
   width: 80%;
   background-color: var(--third-bg-color);
   border-radius: 10px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
   min-height: 69.2vh;
 `;
