@@ -1,15 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div `
-/* width: 45%; */
   max-width: 35%;
   min-width: 55%;
   margin: auto;
-  /* height: ; */
-  /* background-color: var(--third-bg-color); */
   background-color: #1d5064c9;
   border-radius: 10px;
-  /* margin-top: 1.2rem; */
   position: fixed;
   top: 35%;
   left: 20%;
@@ -47,8 +43,6 @@ export const Container = styled.div `
     border-radius: 5px;
     display: block;
   }
-
-
 `;
 
 export const ContainerBtn = styled.div `
@@ -57,7 +51,6 @@ export const ContainerBtn = styled.div `
   grid-row-start: 9;
   display: grid;
   grid-template-columns: 40% 20% 40%;
-  /* grid-template-rows: 100%; */
 
  & button:first-child {
     grid-column-start: 1;
@@ -93,7 +86,5 @@ export const ReturnBtn = styled.button `
     margin: auto;
     width: 2.8em;
     background-size: cover;
-    /* border-radius: 50px; */
-    /* background: red; */
   }
 `;
