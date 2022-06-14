@@ -26,7 +26,7 @@ function TaskDetails() {
     const route = `/${id}`;
     const method = "PUT";
     fetchApi(route, method, data);
-    // setTaskDetails(undefined);
+    setTaskDetails(undefined);
   }
   
   const handleButton = ({ target: { name } }) => {
