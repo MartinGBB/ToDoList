@@ -7,7 +7,7 @@ export const Container = styled.div `
   background-color: #1d5064c9;
   border-radius: 10px;
   position: fixed;
-  top: 35%;
+  top: 15rem;
   left: 20%;
   right: 20%;
   display: grid;
