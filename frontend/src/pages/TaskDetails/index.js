@@ -4,7 +4,6 @@ import { Container, ReturnBtn, ContainerBtn } from './styles';
 import closeImg from "../../Images/close-btn.png";
 import fetchApi from "../../utils/fetch";
 import { MyContext } from '../../components/Hooks/Context';
-import TableTask from "../../components/TableTask";
 
 function TaskDetails() {
   const [task, setTask] = useState("");
@@ -12,8 +11,6 @@ function TaskDetails() {
   const [status, setStatus] = useState('Pendente');
   
   const { taskDetails, setTaskDetails } = useContext(MyContext);
-  // let navigate = useNavigate();
-  // let { taskDetails } = useParams();
   
   const handleDelete = async (id) => {
     const route = `/${id}`;
@@ -30,10 +27,9 @@ function TaskDetails() {
   }
   
   const handleButton = ({ target: { name } }) => {
-    if (name === 'return') return <TableTask />;
+    if (name === 'return') return setTaskDetails(undefined);
     if (name === 'remove') return handleDelete(taskDetails);
-    if (name === 'save') return handleEdit(taskDetails, { task, category, status })
-    setTaskDetails(undefined);
+    if (name === 'save') return handleEdit(taskDetails, { task, category, status });
   }
   
   return (

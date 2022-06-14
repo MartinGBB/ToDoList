@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const Table = styled.table`
-  filter: ${({ taskDetails }) => taskDetails ? 'blur(1px)' : 'blur(0)' };
+  filter: ${({ taskDetails }) => taskDetails ? 'blur(2px)' : 'blur(0)' };
   width: 80%;
   padding: 30px 1px;
   text-align: left;
