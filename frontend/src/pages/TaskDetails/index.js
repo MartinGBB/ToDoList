@@ -1,37 +1,41 @@
-// import { useNavigate, useParams } from "react-router-dom";
-import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+import { useState, useContext } from "react";
 import { Container, ReturnBtn, ContainerBtn } from './styles';
 import closeImg from "../../Images/close-btn.png";
 import fetchApi from "../../utils/fetch";
+import { MyContext } from '../../components/Hooks/Context';
+import TableTask from "../../components/TableTask";
 
-function TaskDetails({ taskId }) {
+function TaskDetails() {
   const [task, setTask] = useState("");
   const [category, setCategory] = useState('Otro');
   const [status, setStatus] = useState('Pendente');
   
+  const { taskDetails, setTaskDetails } = useContext(MyContext);
   // let navigate = useNavigate();
-  // let { taskId } = useParams();
-
+  // let { taskDetails } = useParams();
+  
   const handleDelete = async (id) => {
     const route = `/${id}`;
     const method = "DELETE";
     fetchApi(route, method);
-    // navigate(-1);
+    setTaskDetails(undefined);
   };
 
-    const handleEdit = async (id, data) => {
+  const handleEdit = async (id, data) => {
     const route = `/${id}`;
     const method = "PUT";
     fetchApi(route, method, data);
-    // navigate(-1);
+    // setTaskDetails(undefined);
   }
-
+  
   const handleButton = ({ target: { name } }) => {
-    // if (name === 'return') return navigate(-1);
-    if (name === 'remove') return handleDelete(taskId);
-    if (name === 'save') return handleEdit(taskId, { task, category, status })
+    if (name === 'return') return <TableTask />;
+    if (name === 'remove') return handleDelete(taskDetails);
+    if (name === 'save') return handleEdit(taskDetails, { task, category, status })
+    setTaskDetails(undefined);
   }
-
+  
   return (
     <Container>
       <ReturnBtn

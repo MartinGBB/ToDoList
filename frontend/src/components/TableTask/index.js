@@ -1,15 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import fetchApi from "../../utils/fetch";
 import { Table, Container, Icon } from "./style";
 import detailsImg from "../../Images/details-btn.png";
 // import { useNavigate } from "react-router-dom";
 import TaskDetails from '../../pages/TaskDetails';
 
+import { MyContext } from '../Hooks/Context';
+
 function TableTask() {
   // let navigate = useNavigate();
 
+  const { taskDetails, setTaskDetails } = useContext(MyContext);
+
+
   const [tasks, setTasks] = useState([]);
-  const [taskDetails, setTaskDetails] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   const handleFind = async () => {
@@ -19,6 +23,11 @@ function TableTask() {
     setTasks(response);
     setIsLoading(false);
   };
+
+  // const handleRedirect = (id) => {
+  //   // navigate(`/tasks/${id}`)
+  //   setTaskDetails(id)
+  // }
 
   useEffect(() => {
     handleFind()
@@ -45,7 +54,7 @@ function TableTask() {
                     type="button"
                     name="edit"
                     onClick={ () => setTaskDetails(id) }
-                    // onClick={ () => navigate(`/tasks/${id}`) }
+                    // onClick={ () => handleRedirect(id) }
                   >
                     <Icon src={ detailsImg } alt="details" />
                   </button>
@@ -59,7 +68,7 @@ function TableTask() {
             )).reverse()
           }
         </Table>
-        { taskDetails && <TaskDetails id={ taskDetails }/> }
+        { taskDetails && <TaskDetails /> }
     </Container>
   );
 }
