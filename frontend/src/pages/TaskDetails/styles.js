@@ -14,7 +14,6 @@ export const Container = styled.div `
   grid-template-columns: repeat(10, 10%);
   grid-template-rows: repeat(10, 10%);
 
-
   h3 {
     color: white;
     margin: auto;

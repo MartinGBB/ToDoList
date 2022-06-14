@@ -12,8 +12,10 @@ export const Container = styled.form`
   display: flex;
   color: white;
   font-family: 'Grape Nuts', cursive;
-  position: relative;
-  bottom: 0rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 
   & h1 {
     margin: auto;

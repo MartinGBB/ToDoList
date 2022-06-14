@@ -6,10 +6,10 @@
 
   text-align: center;
   background-color: var(--main-bg-color);
-
+  height: 100%;
+  width: 100%;
   position: absolute;
   bottom: 0;
   top: 0;
-  right: 0;
-  left: 0;
+  justify-content: center;
 };
