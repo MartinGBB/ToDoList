@@ -55,4 +55,5 @@ export const Table = styled.table`
 
 export const Icon = styled.img`
   width: 2em;
+  pointer-events: none;
 `;

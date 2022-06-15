@@ -86,6 +86,7 @@ export const ReturnBtn = styled.button `
   }
 
   & img {
+    pointer-events: none;
     margin: auto;
     width: 2.8em;
     background-size: cover;
