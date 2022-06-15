@@ -10,7 +10,14 @@ function TaskDetails() {
   const [category, setCategory] = useState('Otro');
   const [status, setStatus] = useState('Pendente');
   
-  const { taskDetails, setTaskDetails } = useContext(MyContext);
+  const {
+    taskDetails,
+    setTaskDetails,
+  //   task,
+  //   setTask,
+  //   category,
+  //   setCategory,
+  } = useContext(MyContext);
   
   const handleDelete = async (id) => {
     const route = `/${id}`;
@@ -45,8 +52,9 @@ function TaskDetails() {
 
       <input
         name="task"
-        placeholder="task"
+        placeholder={ taskDetails }
         value={ task }
+        autoComplete="off"
         type="text"
         onChange={ ({ target: { value } }) => setTask(value) }
       />
