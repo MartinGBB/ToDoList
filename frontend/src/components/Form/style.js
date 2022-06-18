@@ -6,22 +6,31 @@ export const Content = styled.form`
   grid-row-start: 1;
   grid-row-end: 2;
 
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
   background-color: var(--color-box-add-task);
   border-bottom: 1px solid #1d5064e0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   height: 50px;
 
   & input {
-    height: 40%;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  
     padding: 10px;
-    min-width: 25%;
     border: none;
   };
 
   & select {
-    height: 80%;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 6;
+
     border: none;
     background: snow;
     cursor: pointer;
@@ -34,8 +43,11 @@ export const Content = styled.form`
 }
   
   & button {
-    height: 80%;
-    margin-left: 15px;
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 6;
+
     padding: 5px;
     border: none;
     background: snow;
