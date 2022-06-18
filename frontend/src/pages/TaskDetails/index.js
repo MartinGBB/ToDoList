@@ -86,20 +86,20 @@ function TaskDetails() {
       </select>
 
       <ContainerBtn>
+      <button
+          type="button"
+          name="save"
+          onClick={ (event) => handleButton(event) }
+        >
+          save
+        </button>
+
         <button
           type="button"
           name="remove"
           onClick={ (event) => handleButton(event) }
         >
           remove
-        </button>
-
-        <button
-          type="button"
-          name="save"
-          onClick={ (event) => handleButton(event) }
-        >
-          save
         </button>
       </ContainerBtn>
     </Container>
