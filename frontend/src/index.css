@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
 
 :root {
-  --main-bg-color: #4ecdc4;
+  --main-bg-color: linear-gradient(to bottom, #4ecdc4, black);
+  /* --main-bg-color: #4ecdc4; */
   --secundary-bg-color: #4ecdc4;
   --third-bg-color: #f4f4f2;
   --fourth-bg-color: #FF6B6B;
