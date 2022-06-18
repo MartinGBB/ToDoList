@@ -4,16 +4,20 @@ import { Container, ReturnBtn, ContainerBtn } from './styles';
 import closeImg from "../../Images/close-btn.png";
 import fetchApi from "../../utils/fetch";
 import { MyContext } from '../../components/Hooks/Context';
-import TableTask from "../../components/TableTask";
 
 function TaskDetails() {
   const [task, setTask] = useState("");
   const [category, setCategory] = useState('Otro');
   const [status, setStatus] = useState('Pendente');
   
-  const { taskDetails, setTaskDetails } = useContext(MyContext);
-  // let navigate = useNavigate();
-  // let { taskDetails } = useParams();
+  const {
+    taskDetails,
+    setTaskDetails,
+  //   task,
+  //   setTask,
+  //   category,
+  //   setCategory,
+  } = useContext(MyContext);
   
   const handleDelete = async (id) => {
     const route = `/${id}`;
@@ -30,10 +34,9 @@ function TaskDetails() {
   }
   
   const handleButton = ({ target: { name } }) => {
-    if (name === 'return') return <TableTask />;
+    if (name === 'return') return setTaskDetails(undefined);
     if (name === 'remove') return handleDelete(taskDetails);
-    if (name === 'save') return handleEdit(taskDetails, { task, category, status })
-    setTaskDetails(undefined);
+    if (name === 'save') return handleEdit(taskDetails, { task, category, status });
   }
   
   return (
@@ -49,8 +52,9 @@ function TaskDetails() {
 
       <input
         name="task"
-        placeholder="task"
+        placeholder={ taskDetails }
         value={ task }
+        autoComplete="off"
         type="text"
         onChange={ ({ target: { value } }) => setTask(value) }
       />

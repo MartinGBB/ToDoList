@@ -27,7 +27,7 @@ function TableTask() {
   if (isLoading) return <h1>Loading</h1>;
   return (
     <Container>
-      <Table>
+      <Table taskDetails={ taskDetails }>
         <thead>
           <tr>
             <th>&nbsp;</th>

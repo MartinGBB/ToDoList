@@ -1,12 +1,17 @@
-import { useState } from 'react';
+import { useContext } from 'react';
 import fetchApi from '../../utils/fetch';
+import { MyContext } from '../Hooks/Context';
 import {
   Content,
 } from './style';
 
 function Form() {
-  const [task, setTask] = useState('');
-  const [category, setCategory] = useState('Outro');
+  const {
+    task,
+    setTask,
+    category,
+    setCategory,
+  } = useContext(MyContext);
 
   const handleSubmit = async () => {
     const data = { task, category, status: 'pending' };

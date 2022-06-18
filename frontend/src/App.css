@@ -1,14 +1,15 @@
 .App {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 66px auto 66px;
+  grid-template-rows: 10% 80% 10%;
   row-gap: 1rem;
 
   text-align: center;
   background-color: var(--main-bg-color);
-  min-height: auto;
   height: 100%;
   width: 100%;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  top: 0;
   justify-content: center;
 };

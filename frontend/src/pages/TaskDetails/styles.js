@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div `
-  max-width: 35%;
-  min-width: 55%;
+  min-width: 45%;
+  height: 40%;
+  padding: 10px;
   margin: auto;
   background-color: #1d5064c9;
   border-radius: 10px;
   position: fixed;
-  top: 35%;
+  top: 12rem;
   left: 20%;
   right: 20%;
   display: grid;
@@ -52,7 +53,7 @@ export const ContainerBtn = styled.div `
   grid-column-end: 10;
   grid-row-start: 9;
   display: grid;
-  margin: 10px;
+  margin: 10px 0;
   grid-template-columns: 40% 20% 40%;
 
  & button:first-child {
@@ -76,7 +77,7 @@ export const ReturnBtn = styled.button `
   border: transparent; 
   padding: 0;
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 1px;
 
   & button:active {
@@ -86,6 +87,7 @@ export const ReturnBtn = styled.button `
   }
 
   & img {
+    pointer-events: none;
     margin: auto;
     width: 2.8em;
     background-size: cover;
