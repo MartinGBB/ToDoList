@@ -11,7 +11,7 @@ export const Container = styled.div`
 
   margin: auto;
   width: 80%;
-  background-color: var(--third-bg-color);
+  /* background-color: var(--third-bg-color); */
   border-radius: 10px;
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;

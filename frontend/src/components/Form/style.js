@@ -8,11 +8,11 @@ export const Content = styled.form`
 
   background-color: #1d5064e0;
   border-bottom: 1px solid #1d5064e0;
-  /* display: flex; */
+  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px 10px 0 0;
-  padding: 18px 30px;
+  margin-bottom: 10px;
 
   & input {
     width: 25%;

@@ -9,8 +9,8 @@ export const Container = styled.form`
   color: white;
   
   & h1 {
-    font-family: var(--font-primary);
     margin: auto;
+    font-family: var(--font-primary);
     font-size: var(--font-size-primary);
   }
   `;
