@@ -10,8 +10,7 @@ export const Container = styled.div`
   grid-template-rows: repeat(10, 1fr);
 
   margin: auto;
-  width: 80%;
-  border-radius: 10px;
+  width: 60%;
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
   /* max-height: 98%; */

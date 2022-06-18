@@ -6,6 +6,7 @@
 
   text-align: center;
   background-color: var(--main-bg-color);
+  width: 100%;
   position: absolute;
   top: 0;
   bottom: 0;

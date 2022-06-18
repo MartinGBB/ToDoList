@@ -6,30 +6,40 @@ export const Container = styled.div`
   grid-row-start: 2; 
   grid-row-end: 11;
 
-  display: grid;
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 5px;
+  }
+
+  /* display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr); */
 
   margin: auto;
   /* display: flex; */
   background-color: var(--third-bg-color);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   /* position: relative; */
-width: 100%;
-height: 100%;
-overflow: auto;
-`;
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+  overflow: auto;
+  `;
+
 
 export const Table = styled.table`
-  grid-column-start: 1; 
-  grid-column-end: 11;
+  /* grid-column-start: 1;
+  grid-column-end: 10;
   grid-row-start: 1;
-  grid-row-end: 11;
-height: 100%;
-overflow: hidden;
- filter: ${({ taskDetails }) => taskDetails ? 'blur(2px)' : 'blur(0)' };
-  width: 80%;
-  padding: 30px 1px;
+  grid-row-end: 11; */
+
+  filter: ${({ taskDetails }) => taskDetails ? 'blur(2px)' : 'blur(0)' };
+  width: 100%;
+  padding: 25px 1px;
   text-align: left;
   margin: auto;
   flex-wrap: wrap;
