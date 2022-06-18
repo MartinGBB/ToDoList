@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Content = styled.form`
+export const Container = styled.form`
   grid-column-start: 1;
   grid-column-end: 11;
   grid-row-start: 1;

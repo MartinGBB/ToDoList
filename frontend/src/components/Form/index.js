@@ -1,11 +1,8 @@
 import { useContext } from 'react';
 import fetchApi from '../../utils/fetch';
 import { MyContext } from '../Hooks/Context';
+import { Container } from './style';
 import plusImg from "../../Images/plus.png";
-
-import {
-  Content,
-} from './style';
 
 function Form() {
   const {
@@ -25,7 +22,7 @@ function Form() {
   };
 
   return (
-    <Content>
+    <Container>
       <input
         placeholder="Crie sua tarefa"
         name="task"
@@ -51,7 +48,7 @@ function Form() {
       >
         <img src={ plusImg } alt="close" />
       </button>
-    </Content>
+    </Container>
   );
 }
 
