@@ -50,6 +50,12 @@ export const Content = styled.form`
     top: 3px;
     box-shadow: none;
 }
+
+  & input:focus, select:focus, button:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    }
 `;
 
 // referens: https://www.todoespacoonline.com/w/2014/05/efeito-3d-em-botoes-com-css/
