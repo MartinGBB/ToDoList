@@ -7,7 +7,8 @@ export const Container = styled.form`
   grid-row-end: 2;
   display: flex;
   color: white;
-  
+  margin-top: 15px;
+
   & h1 {
     margin: auto;
     font-family: var(--font-primary);
