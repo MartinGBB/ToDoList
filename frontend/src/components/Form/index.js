@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import fetchApi from '../../utils/fetch';
 import { MyContext } from '../Hooks/Context';
+import plusImg from "../../Images/plus.png";
+
 import {
   Content,
 } from './style';
@@ -47,7 +49,7 @@ function Form() {
         type="button"
         onClick={ handleSubmit }
       >
-        Adicionar
+        <img src={ plusImg } alt="close" />
       </button>
     </Content>
   );

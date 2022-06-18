@@ -12,7 +12,6 @@ export const Content = styled.form`
 
   background-color: var(--color-box-add-task);
   border-bottom: 1px solid #1d5064e0;
-
   height: 50px;
 
   & input {
@@ -45,10 +44,9 @@ export const Content = styled.form`
   & button {
     grid-column-start: 9;
     grid-column-end: 10;
-    grid-row-start: 1;
-    grid-row-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 5;
 
-    padding: 5px;
     border: none;
     background: snow;
     color: var(--font-color-primary);
@@ -57,15 +55,22 @@ export const Content = styled.form`
 
   & button:active {
     position: relative;
-    top: 3px;
+    top: 1px;
     box-shadow: none;
 }
 
-  & input:focus, select:focus, button:focus {
+  & img {
+  pointer-events: none;
+  color: red;
+  width: 17px;
+}
+  
+& input:focus, select:focus, button:focus {
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
     }
+
 `;
 
 // referens: https://www.todoespacoonline.com/w/2014/05/efeito-3d-em-botoes-com-css/
