@@ -11,7 +11,7 @@ export const Container = styled.form`
   grid-template-rows: repeat(5, 1fr);
 
   background-color: var(--color-box-add-task);
-  border-bottom: 1px solid #1d5064e0;
+  border-bottom: 0.1px solid #1d5064e0;
   height: 50px;
 
   & input {
@@ -36,11 +36,6 @@ export const Container = styled.form`
     color: var(--font-color-primary);
   };
 
-  & select:hover {
-    color: black;
-    transition:0s;
-}
-  
   & button {
     grid-column-start: 9;
     grid-column-end: 10;
@@ -70,7 +65,6 @@ export const Container = styled.form`
     border: 0 none;
     outline: 0;
     }
-
 `;
 
 // referens: https://www.todoespacoonline.com/w/2014/05/efeito-3d-em-botoes-com-css/
