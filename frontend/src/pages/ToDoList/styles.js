@@ -16,4 +16,8 @@ export const Container = styled.div`
   /* max-height: 98%; */
 
   /* min-height: 69.2vh; */
+
+  @media(max-width: 800px) {
+    width: 80%;
+  }
 `;
