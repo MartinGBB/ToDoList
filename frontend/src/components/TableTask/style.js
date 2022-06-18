@@ -15,9 +15,9 @@ export const Container = styled.div`
     border-radius: 5px;
   }
 
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr); */
+  grid-template-rows: repeat(10, 1fr);
 
   margin: auto;
   /* display: flex; */
@@ -32,10 +32,10 @@ export const Container = styled.div`
 
 
 export const Table = styled.table`
-  /* grid-column-start: 1;
+  grid-column-start: 2;
   grid-column-end: 10;
   grid-row-start: 1;
-  grid-row-end: 11; */
+  grid-row-end: 11;
 
   filter: ${({ taskDetails }) => taskDetails ? 'blur(2px)' : 'blur(0)' };
   width: 100%;
@@ -75,6 +75,8 @@ export const Table = styled.table`
   }
 
   @media(max-width: 800px) {
+    grid-column-start: 1;
+    grid-column-end: 10;
     font-size: 12px;
     width: 90%;
   }
