@@ -9,6 +9,9 @@
 
   --font-primary: 'Grape Nuts', cursive;
   --font-size-primary: 35px;
+
+    /* form */
+  --color-box-add-task: #FFFFFF;
 }
 
 html {

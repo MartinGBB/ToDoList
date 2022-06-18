@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 export const Content = styled.form`
-  grid-column-start: 1; 
+  grid-column-start: 1;
   grid-column-end: 11;
-  grid-row-start: 1; 
+  grid-row-start: 1;
   grid-row-end: 2;
 
-  /* background-color: #1d5064e0; */
-  background-color: #FFFF;
+  background-color: var(--color-box-add-task);
   border-bottom: 1px solid #1d5064e0;
   display: flex;
   align-items: center;
@@ -15,16 +14,14 @@ export const Content = styled.form`
   height: 50px;
 
   & input {
-    min-width: 25%;
+    height: 40%;
     padding: 10px;
+    min-width: 25%;
     border: none;
-    margin: 5px;
   };
 
   & select {
-    width: auto;
-    height: 3.4em;
-    margin: 5px;
+    height: 80%;
     border: none;
     background: snow;
     cursor: pointer;
@@ -37,11 +34,12 @@ export const Content = styled.form`
 }
   
   & button {
+    height: 80%;
+    margin-left: 15px;
     padding: 5px;
     border: none;
     background: snow;
     color: gray;
-    margin: 5px;
     cursor: pointer;
   };
 
