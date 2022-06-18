@@ -10,7 +10,7 @@ export const Container = styled.form`
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(5, 1fr);
 
-  background-color: var(--color-box-add-task);
+  background-color: var(--secundary-bg-color);
   border-bottom: 0.1px solid #1d5064e0;
   height: 50px;
 
@@ -22,6 +22,7 @@ export const Container = styled.form`
   
     padding: 10px;
     border: none;
+    background: transparent;
   };
 
   & select {
@@ -31,7 +32,7 @@ export const Container = styled.form`
     grid-row-end: 6;
 
     border: none;
-    background: snow;
+    background: transparent;
     cursor: pointer;
     color: var(--font-color-primary);
   };
@@ -43,7 +44,7 @@ export const Container = styled.form`
     grid-row-end: 5;
 
     border: none;
-    background: snow;
+    background: transparent;
     color: var(--font-color-primary);
     cursor: pointer;
   };

@@ -20,7 +20,7 @@ export const Container = styled.div`
 
   margin: auto;
   /* display: flex; */
-  background-color: var(--third-bg-color);
+  background-color: var(--secundary-bg-color);
   /* border-radius: 10px; */
   /* position: relative; */
   width: 100%;
