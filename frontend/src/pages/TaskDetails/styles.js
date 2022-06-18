@@ -1,27 +1,28 @@
 import styled from 'styled-components';
 
 export const Container = styled.div `
-  min-width: 45%;
+  width: 30%;
   height: 40%;
-  padding: 10px;
+  padding: 2%;
   margin: auto;
   background-color: #1d5064c9;
   border-radius: 10px;
   position: fixed;
-  top: 12rem;
+  top: 30%;
   left: 20%;
   right: 20%;
   display: grid;
   grid-template-columns: repeat(10, 10%);
   grid-template-rows: repeat(10, 10%);
 
-  h3 {
+  & h3 {
+    font-size: var(--font-size-primary);
     color: white;
     margin: auto;
     padding: 10px;
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-column-end: 9;
-    grid-row-start: 1;
+    grid-row: 1;
   }
 
   & input {
@@ -45,6 +46,11 @@ export const Container = styled.div `
     height: 2.2em;
     border-radius: 5px;
     display: block;
+  }
+
+  @media(max-width: 800px) {
+    width: 56%;
+    top: 30%;
   }
 `;
 

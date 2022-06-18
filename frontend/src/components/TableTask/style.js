@@ -5,6 +5,7 @@ export const Container = styled.div`
   grid-column-end: 11;
   grid-row-start: 2; 
   grid-row-end: 11;
+  position: relative;
 
   ::-webkit-scrollbar {
     width: 3px;

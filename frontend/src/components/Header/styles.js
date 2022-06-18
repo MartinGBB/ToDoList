@@ -11,7 +11,7 @@ export const Container = styled.form`
 
   & h1 {
     margin: auto;
-    font-family: var(--font-primary);
+    font-family: var(--font-family-title);
     font-size: var(--font-size-primary);
   }
   `;
