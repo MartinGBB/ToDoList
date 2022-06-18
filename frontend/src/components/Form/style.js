@@ -6,21 +6,20 @@ export const Content = styled.form`
   grid-row-start: 1; 
   grid-row-end: 2;
 
-  background-color: #1d5064e0;
+  /* background-color: #1d5064e0; */
+  background-color: #FFFF;
   border-bottom: 1px solid #1d5064e0;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 55px;
-  margin-bottom: 10px;
+  /* min-height: 55px; */
+  height: 50px;
 
   & input {
-    width: 25%;
-    padding: 6px;
-    border: 1px solid #bbb;
-    border-radius: 3px;
+    min-width: 25%;
+    padding: 10px;
+    border: none;
     margin: 5px;
-    box-shadow:0 2px 0 #1d5064e0;
   };
 
   & select {
