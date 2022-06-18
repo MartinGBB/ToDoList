@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  grid-column-start: 1; 
-  grid-column-end: 11;
-  grid-row-start: 2; 
-  grid-row-end: 11;
+  grid-column: 1 / 11; 
+  grid-row: 2 / 11; 
   position: relative;
 
   ::-webkit-scrollbar {
@@ -33,10 +31,8 @@ export const Container = styled.div`
 
 
 export const Table = styled.table`
-  grid-column-start: 2;
-  grid-column-end: 11;
-  grid-row-start: 1;
-  grid-row-end: 11;
+  grid-column: 2 / 11;
+  grid-row-start: 1 / 11;
 
   filter: ${({ taskDetails }) => taskDetails ? 'blur(2px)' : 'blur(0)' };
   width: 100%;
@@ -77,8 +73,7 @@ export const Table = styled.table`
   }
 
   @media(max-width: 800px) {
-    grid-column-start: 1;
-    grid-column-end: 10;
+    grid-column: 1 / 11;
     font-size: 12px;
     width: 90%;
   }
