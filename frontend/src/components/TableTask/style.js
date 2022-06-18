@@ -33,12 +33,13 @@ export const Container = styled.div`
 
 export const Table = styled.table`
   grid-column-start: 2;
-  grid-column-end: 10;
+  grid-column-end: 11;
   grid-row-start: 1;
   grid-row-end: 11;
 
   filter: ${({ taskDetails }) => taskDetails ? 'blur(2px)' : 'blur(0)' };
   width: 100%;
+  min-height: 100%;
   padding: 25px 1px;
   text-align: left;
   margin: auto;
