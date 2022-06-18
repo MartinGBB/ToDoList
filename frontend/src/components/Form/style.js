@@ -12,7 +12,6 @@ export const Content = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* min-height: 55px; */
   height: 50px;
 
   & input {
@@ -24,13 +23,17 @@ export const Content = styled.form`
 
   & select {
     width: auto;
-    padding: 5px;
-    border: 1px solid #bbb;
-    border-radius: 3px;
-    background: snow;
+    height: 3.4em;
     margin: 5px;
-    box-shadow:0 2px 0 #1d5064e0;
+    border: none;
+    background: snow;
+    color: gray;
   };
+
+  & select:hover {
+  color: black;
+  transition:0s;
+}
   
   & button {
     width: auto;
