@@ -1,7 +1,7 @@
 .App {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 66px auto 66px;
+  grid-template-rows: 10% 80% 10%;
   row-gap: 1rem;
 
   text-align: center;

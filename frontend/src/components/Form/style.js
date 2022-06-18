@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
 export const Content = styled.form`
+  grid-column-start: 1; 
+  grid-column-end: 11;
+  grid-row-start: 1; 
+  grid-row-end: 2;
+
   background-color: #1d5064e0;
   border-bottom: 1px solid #1d5064e0;
   /* display: flex; */
