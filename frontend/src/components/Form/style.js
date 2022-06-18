@@ -25,7 +25,7 @@ export const Content = styled.form`
     border: none;
     background: snow;
     cursor: pointer;
-    color: gray;
+    color: var(--font-color-primary);
   };
 
   & select:hover {
@@ -39,7 +39,7 @@ export const Content = styled.form`
     padding: 5px;
     border: none;
     background: snow;
-    color: gray;
+    color: var(--font-color-primary);
     cursor: pointer;
   };
 

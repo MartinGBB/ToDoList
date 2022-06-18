@@ -12,6 +12,7 @@
 
     /* form */
   --color-box-add-task: #FFFFFF;
+  --font-color-primary: gray;
 }
 
 html {
