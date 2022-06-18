@@ -11,7 +11,7 @@ export const Content = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px 10px 0 0;
+  min-height: 55px;
   margin-bottom: 10px;
 
   & input {
