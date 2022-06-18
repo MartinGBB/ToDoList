@@ -6,6 +6,9 @@
   --secundary-bg-color: #4ecdc4;
   --third-bg-color: #f4f4f2;
   --fourth-bg-color: #FF6B6B;
+
+  --font-primary: 'Grape Nuts', cursive;
+  --font-size-primary: 35px;
 }
 
 html {

@@ -7,10 +7,10 @@ export const Container = styled.form`
   grid-row-end: 2;
   display: flex;
   color: white;
-  font-family: 'Grape Nuts', cursive;
-
+  
   & h1 {
+    font-family: var(--font-primary);
     margin: auto;
-    font-size: 2rem;
+    font-size: var(--font-size-primary);
   }
   `;
