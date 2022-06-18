@@ -4,7 +4,7 @@ export const Container = styled.div`
   grid-column-start: 1; 
   grid-column-end: 11;
   grid-row-start: 2; 
-  grid-row-end: 10;
+  grid-row-end: 11;
 
   display: grid;
   grid-template-columns: repeat(10, 1fr);
