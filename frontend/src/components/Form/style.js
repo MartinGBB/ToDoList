@@ -27,29 +27,28 @@ export const Content = styled.form`
     margin: 5px;
     border: none;
     background: snow;
+    cursor: pointer;
     color: gray;
   };
 
   & select:hover {
-  color: black;
-  transition:0s;
+    color: black;
+    transition:0s;
 }
   
   & button {
-    width: auto;
     padding: 5px;
-    border: 1px solid #bbb;
-    border-radius: 3px;
+    border: none;
     background: snow;
+    color: gray;
     margin: 5px;
     cursor: pointer;
-    box-shadow:0 2px 0 #1d5064e0;
   };
 
   & button:active {
-  position: relative;
-  top: 3px;
-  box-shadow: none;
+    position: relative;
+    top: 3px;
+    box-shadow: none;
 }
 `;
 
