@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import fetchApi from '../../utils/fetch';
 import { MyContext } from '../Hooks/Context';
 import { Container } from './style';
-import plusImg from "../../Images/plus.png";
+import plusImg from "../../Images/addPlus.png";
 
 function Form() {
   const {

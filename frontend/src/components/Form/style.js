@@ -58,7 +58,7 @@ export const Container = styled.form`
   & img {
   pointer-events: none;
   color: red;
-  width: 17px;
+  width: 21px;
 }
   
 & input:focus, select:focus, button:focus {
