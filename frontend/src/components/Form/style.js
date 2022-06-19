@@ -1,54 +1,71 @@
 import styled from 'styled-components';
 
-export const Content = styled.form`
-  grid-column-start: 1; 
+export const Container = styled.form`
+  grid-column-start: 1;
   grid-column-end: 11;
-  grid-row-start: 1; 
+  grid-row-start: 1;
   grid-row-end: 2;
 
-  background-color: #1d5064e0;
-  border-bottom: 1px solid #1d5064e0;
-  /* display: flex; */
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px 10px 0 0;
-  padding: 18px 30px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  background-color: var(--secundary-bg-color);
+  border-bottom: 0.1px solid #1d5064e0;
+  height: 50px;
 
   & input {
-    width: 25%;
-    padding: 6px;
-    border: 1px solid #bbb;
-    border-radius: 3px;
-    margin: 5px;
-    box-shadow:0 2px 0 #1d5064e0;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  
+    padding: 10px;
+    border: none;
+    background: transparent;
   };
 
   & select {
-    width: auto;
-    padding: 5px;
-    border: 1px solid #bbb;
-    border-radius: 3px;
-    background: snow;
-    margin: 5px;
-    box-shadow:0 2px 0 #1d5064e0;
-  };
-  
-  & button {
-    width: auto;
-    padding: 5px;
-    border: 1px solid #bbb;
-    border-radius: 3px;
-    background: snow;
-    margin: 5px;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 6;
+
+    border: none;
+    background: transparent;
     cursor: pointer;
-    box-shadow:0 2px 0 #1d5064e0;
+    color: var(--font-color-primary);
+  };
+
+  & button {
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: 5;
+
+    border: none;
+    background: transparent;
+    color: var(--font-color-primary);
+    cursor: pointer;
   };
 
   & button:active {
-  position: relative;
-  top: 3px;
-  box-shadow: none;
+    position: relative;
+    top: 1px;
+    box-shadow: none;
 }
+
+  & img {
+  pointer-events: none;
+  color: red;
+  width: 17px;
+}
+  
+& input:focus, select:focus, button:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    }
 `;
 
 // referens: https://www.todoespacoonline.com/w/2014/05/efeito-3d-em-botoes-com-css/

@@ -1,10 +1,18 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  grid-column-start: 1; 
-  grid-column-end: 11;
-  grid-row-start: 2; 
-  grid-row-end: 10;
+  grid-column: 1 / 11; 
+  grid-row: 2 / 11; 
+  position: relative;
+
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 5px;
+  }
 
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -12,24 +20,24 @@ export const Container = styled.div`
 
   margin: auto;
   /* display: flex; */
-  background-color: var(--third-bg-color);
-  border-radius: 10px;
+  background-color: var(--secundary-bg-color);
+  /* border-radius: 10px; */
   /* position: relative; */
-width: 100%;
-height: 100%;
-overflow: auto;
-`;
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+  overflow: auto;
+  `;
+
 
 export const Table = styled.table`
-  grid-column-start: 1; 
-  grid-column-end: 11;
-  grid-row-start: 1;
-  grid-row-end: 11;
-height: 100%;
-overflow: hidden;
- filter: ${({ taskDetails }) => taskDetails ? 'blur(2px)' : 'blur(0)' };
-  width: 80%;
-  padding: 30px 1px;
+  grid-column: 2 / 11;
+  grid-row-start: 1 / 11;
+
+  filter: ${({ taskDetails }) => taskDetails ? 'blur(2px)' : 'blur(0)' };
+  width: 100%;
+  min-height: 100%;
+  padding: 25px 1px;
   text-align: left;
   margin: auto;
   flex-wrap: wrap;
@@ -65,6 +73,7 @@ overflow: hidden;
   }
 
   @media(max-width: 800px) {
+    grid-column: 1 / 11;
     font-size: 12px;
     width: 90%;
   }
