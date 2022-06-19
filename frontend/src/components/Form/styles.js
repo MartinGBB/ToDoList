@@ -53,19 +53,18 @@ export const Container = styled.form`
     position: relative;
     top: 1px;
     box-shadow: none;
-}
+  }
 
   & img {
-  pointer-events: none;
-  color: red;
-  width: 21px;
-}
-  
-& input:focus, select:focus, button:focus {
+    pointer-events: none;
+    width: 21px;
+  }
+
+  & input:focus, select:focus, button:focus {
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
-    }
+  }
 `;
 
 // referens: https://www.todoespacoonline.com/w/2014/05/efeito-3d-em-botoes-com-css/
