@@ -2,9 +2,9 @@
 
 ## Contexto
 
-Esse projeto foi desenvolvido para simulação de vaga de Full Stack.
-
-A proposta foi desenvolver uma aplicação que for capaz de ajudar as pessoas com a organização de seu tempo.
+Esse projeto foi desenvolvido para testar habilidades no front end e no back end.
+Ele é uma aplicação de lista de tarefas na que se poderão adicionar, deletar, e editar tarefas.
+Estas são listadas por tarefa, categorias e estado atual da tarefa.
 
 ## Como instalar
 
@@ -31,6 +31,7 @@ Abra um terminal no seu computador e utilize os comandos a baixo na ordem que s�
     - `npm install`
     - `npm start`
 
+Ao rodar o `npm start` na pasta de `frontend` uma janela sera aberta no navegador. Se ela não abrir pode abrir uma janela e colocar no buscador `http//localhost/3000` e a aplicação será iniciada.
 
 O Backend esta configurado na porta local 3001. Caso deseje utilizar outra porta entre no arquivo `.env` e mude o valor da variavel `PORT` para a porta desejada.
 
